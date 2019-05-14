@@ -124,6 +124,10 @@ nav ul li a {
     border-radius: 5px;
     padding: 0.5em;
 }
+/* apply same font-family to labels */
+.signup-labels{
+    font-family: sans-serif;
+}
 
 .form-container button,
 #signup-button {
