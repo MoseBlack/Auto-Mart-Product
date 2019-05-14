@@ -183,7 +183,6 @@ nav ul li a {
     display: none;
     position: fixed;
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     margin: 0 auto;
@@ -199,12 +198,10 @@ nav ul li a {
 .modal-content {
     background-color: #fefefe;
     margin: 1em auto;
-    /* 15% from the top and centered */
     padding: 2em;
     min-height: 100px;
     border: 1px solid #888;
     width: 60%;
-    /* Could be more or less, depending on screen size */
 }
 
 #modal-text {
