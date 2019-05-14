@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Auto Mart</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h2><span class="brand">Auto</span>Mart</h2>
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="buy.html" id="active-link">Buy</a></li>
+                    <li class="nav-item"><a href="sell.html" id="sell-link">Sell</a></li>
+                    <li class="nav-item"><a href="about.html" id="about-link">About</a></li>
+                    <li class="nav-item"><a href="signup.html" id="login-link">Log in</a></li>
+                    <li class="nav-item"><img src="./images/user.png" alt="user" id="user-profile"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="form-container">
+        <p id="signin-title">Sign in to continue to Auto Mart</p>
+        <form action="">
+            <label for="email-input" class="">Email</label><br>
+            <input type="email" placeholder="Enter email" id="email-input"><br>
+            <label for="password-input">Password</label><br>
+            <input type="password" placeholder="Enter password" id="password-input"><br>
+            <span id="pass-alert">a minimum of eight characters is required</span><br>
+            <label for="new-password" id="confirm-password">Confirm Password</label><br>
+            <input type="password" placeholder="re-enter password" id="new-password"><br>
+            <button id="signin-button">Sign in</button>
+            <button id="signup-button">Sign Up</button><br>
+            <span id="reset-password">Forgot password</span>
+        </form>
+        <span id="not-member">Not a member&nbsp;?</span><br>
+        <span><a href="#" id="signup-link">Sign Up</a></span>
+        <span><a href="#" id="signin-link">Sign in</a></span>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <p id="modal-text">We will send instructions to your email to reset password</p>
+            <span class="close">&times;</span><br>
+            <form action="" id="send-resetform">
+                <input type="email" id="send-resetinput" placeholder="Email">
+                <button id="send-resetbutton">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
