@@ -62,7 +62,7 @@ nav ul li a {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
-    background-image: url('images/welcome-car.jpg');
+    background-image: url('./images/welcome-car.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
