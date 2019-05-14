@@ -245,3 +245,9 @@ nav ul li a {
 #user-profile {
     cursor: pointer;
 }
+/* media queries to target specific screen resolution */
+@media(max-width : 536px){
+    nav{
+        margin : 0.5em;
+    }
+}
