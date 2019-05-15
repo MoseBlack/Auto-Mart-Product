@@ -100,8 +100,16 @@ signupButton.addEventListener('click', function (e) {
     if (emailInput.value.length == 0 || passwordInput.value.length == 0 || confirmInput.value == 0) {
         emptyField();
         return;
-    } else if (passwordInput.value.length < 8) {
+    }
+     else if (passwordInput.value.length < 8 ) {
         signTitle.textContent = 'Password too short';
+        signTitle.style.color = '#e74c3c';
+        setTimeout(function () {
+            window.location.reload();
+        }, 2000);
+    }
+    else if (passwordInput.value.indexOf(' ') !== -1 ) {
+        signTitle.textContent = 'Spaces are not allowed';
         signTitle.style.color = '#e74c3c';
         setTimeout(function () {
             window.location.reload();
