@@ -26,7 +26,7 @@ header {
 
 .header-container h2,
 .header-container h2 .brand {
-    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -46,21 +46,25 @@ nav ul {
     color: #F0810C;
 }
 
-nav ul li a {
+li {
+    list-style-type: none;
+}
+
+a {
     text-decoration: none;
+}
+
+nav ul li a {
     margin: 0 1em;
     color: #3B698D;
 }
 
-#user-profile {
-    display: none;
-}
 
 /* welcome section styles*/
 
 .welcome-section {
     color: #ffffff;
-    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
     background-image: url('./images/mercedes.jpg');
     background-position: center;
@@ -115,7 +119,7 @@ nav ul li a {
 }
 
 #signin-title {
-    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     margin-bottom: 15px;
 }
 
@@ -124,9 +128,10 @@ nav ul li a {
     border-radius: 5px;
     padding: 0.5em;
 }
+
 /* apply same font-family to labels */
-.signup-label{
-    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+.signup-label {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -136,7 +141,6 @@ nav ul li a {
     border-radius: 10px;
     border: none;
     margin-top: 0.8em;
-    background-color: #3B698D;
 }
 
 #email-input,
@@ -167,19 +171,20 @@ nav ul li a {
 #signup-button,
 #signin-link,
 #confirm-password,
-#new-password {
+#new-password,
+#user-profile {
     display: none;
 }
 
 #signup-link,
-#signin-link {
+#signin-link,
+#reset-password {
     color: #3B698D;
 }
 
 #reset-password {
     font-size: 0.8em;
     font-style: italic;
-    color: #3B698D;
     cursor: pointer;
 }
 
@@ -194,7 +199,8 @@ nav ul li a {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);/* Fallback color */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -237,7 +243,6 @@ nav ul li a {
     padding: 0.5em;
     color: #ffffff;
     cursor: pointer;
-    background-color: #3B698D;
 }
 
 #send-resetinput {
@@ -249,10 +254,137 @@ nav ul li a {
 #user-profile {
     cursor: pointer;
 }
+
+/* buy section main menu */
+.buy-section,
+#send-resetbutton,
+#signup-button,
+#signin-button {
+    background-color: #3B698D;
+}
+
+.buy-section {
+    min-height: 150px
+}
+
+#buy-selector {
+    display: flex;
+}
+
+#buy-selector li {
+    text-decoration: none;
+}
+
+.selector-item {
+    width: 15%;
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.selector-item:hover {
+    background-color: #F0810C;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.item-border {
+    border-right: 2px solid #3B698D;
+    border-bottom: 2px solid #3B698D;
+}
+
+/* buy side menu*/
+#create-ad {
+    background-color: #F0810C;
+    padding: 0.8em;
+    border: none;
+    border-radius: 20px;
+    margin: 0.8em;
+    color: #fff;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+#left-sidemenu {
+    height: 200px;
+    border: 1px solid #c4c4c4;
+    width: 23%;
+    height: 100%;
+}
+
+.side-item {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0.8em;
+}
+
+.arrow-item {
+    float: right;
+}
+
+#side-menu {
+    padding: 0.2em;
+    display: flex;
+}
+
+/* car card */
+.right-sidemenu {
+    width: 70%;
+    margin: auto;
+    padding: 0.2em;
+}
+
+.right-sidemenu ul {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.car-card,
+.car-profile,
+.car-detail,
+    {
+    width: 246px;
+
+}
+
+.car-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 15px;
+    padding: 0.2em;
+    background-color: yellow;
+}
+
+.car-picture {
+    width: 100%;
+    height: 100%;
+}
+
+.car-profile {
+    max-height: 164px;
+    position: relative;
+}
+
+.car-title {
+    margin: 0.2em;
+}
+
+.car-detail {
+    max-height: 82px;
+    max-width: 200px;
+}
+
+.car-card {
+    margin: 0.5em;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+}
+
 /* media queries to target specific screen resolution */
-@media(max-width : 535px){
-    nav ul li a{
-        margin : 0 0.6em;
+@media(max-width : 535px) {
+    nav ul li a {
+        margin: 0 0.6em;
     }
 
 }
