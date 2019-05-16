@@ -381,6 +381,181 @@ nav ul li a {
     border-radius: 5px;
 }
 
+/* sell page styles */
+#user-pro {
+    margin: 0 0.2em;
+}
+
+#sell-selectorcontainer {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.dealer-selector,
+.private-selector {
+    width: 40%;
+    margin: auto;
+}
+
+.dealer-selector img,
+.private-selector img {
+    border-radius: 50%;
+    border: 2px solid #3B698D;
+}
+
+.dealer-selector img {
+    width: 100px;
+    height: 100px;
+}
+
+.bullet-container {
+    display: flex;
+    width: 20%;
+    margin: auto;
+}
+
+.bullet-container hr {
+    width: 100%;
+    margin: auto;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F0810C;
+}
+
+/* sell tips section */
+#sell-precautions {
+    text-align: center;
+}
+
+#sell-precautions ul li {
+    display: flex;
+}
+
+.sell-tips {
+    width: 50%;
+    margin: auto;
+}
+
+/* post ad form */
+#postupdate {
+    display: flex;
+    width: 100%;
+}
+
+#postform {
+    width: 60%;
+    margin: 0.2em;
+}
+
+#updateform {
+    width: 40%;
+}
+
+#car-registerform {
+    padding: 0.8em;
+}
+
+.car-selectinfo {
+    width: 200px;
+    min-height: 40px;
+    margin: 0.5em;
+    border-radius: 10px;
+    padding: 0.1em;
+}
+
+.instrunctions,
+.cautions {
+    margin: 0.5em;
+}
+
+#multi-pic {
+    display: flex;
+}
+
+#multi-pic li img {
+    width: 50px;
+    height: 50px;
+}
+
+#add-pic {
+    width: 100%;
+    min-height: 150px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+#save-carinfo {
+    padding: 0.8em 3em;
+    margin: 0.5em;
+    color: #ffffff;
+    background: #3498DB;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-pic p,
+#add-pic img {
+    margin-top: 1em;
+}
+
+.feature-title {
+    margin: 0.5em;
+    color: #ffffff;
+    background-color: #3B698D;
+    padding: 0.2em;
+    border-radius: 5px;
+}
+
+#update-carcontainer {
+    width: 100%;
+    margin: auto;
+    padding: 0.2em;
+}
+
+#update-carcontainer img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 0.4em;
+}
+
+.car-updateinfo {
+    display: flex;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    min-height: 100px;
+    margin-top: 0.5em;
+}
+
+.car-updateinfo ul {
+    width: 50%;
+    margin: auto;
+}
+
+#delete,
+#update {
+    margin: 0.5em;
+}
+
+#delete a,
+#update a {
+    padding: 0.5em;
+    color: #3498DB;
+}
+
+
+
 /* media queries to target specific screen resolution */
 @media(max-width : 535px) {
     nav ul li a {
