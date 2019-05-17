@@ -107,6 +107,110 @@ nav ul li a {
     border-radius: 5px;
 }
 
+#quick-section {
+    display: flex;
+}
+
+#quick-section #left-side {
+    width: 70%;
+    margin: auto;
+    min-height: 400px;
+}
+
+#quick-section #right-side {
+    width: 30%;
+    margin: auto;
+}
+
+#main-box,
+#finder > * {
+    border: 1px solid #c4c4c4;
+    margin: 1em;
+    width: 200px;
+    height: 160px;
+    border-radius: 5px;
+}
+
+.finder-card {
+    padding: 0.5em;
+}
+
+.finder-title {
+    margin: 0.3em;
+}
+
+#main-box {
+    width: 50%;
+    margin: auto;
+}
+
+#quick-section #right-side {}
+
+#quick-section #left-side #finder {
+    display: flex;
+}
+
+#quick-section #left-side ul {
+    text-align: center;
+    height: 370px;
+    padding: 1em;
+}
+
+#quick-form {
+    padding: 1em;
+    background-color: #3B698D;
+    margin: 0.5em;
+    min-height: 370px;
+    border-radius: 5px;
+}
+
+#search-icon,
+#resellers,
+#main-icon {
+    border-radius: 50%;
+    border: 2px solid #c4c4c4;
+    width: 30px;
+    height: 30px;
+}
+
+.quick-select {
+    margin: 1em;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    width: 150px;
+    padding: 0.5em;
+}
+
+#finder {
+    width: 60%;
+    margin: auto;
+}
+
+#footer-container {
+    display: flex;
+    width: 80%;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+}
+
+#footer-container > * {
+    margin: 1em;
+}
+
+#footer-container ul > * {
+    margin: 0.4em;
+}
+
+footer {
+    background-color: #041022;
+}
+
+.footer-title {
+    color: #c4c4c4;
+    font-weight: bold;
+}
+
 /* sign up form styles */
 .form-container {
     width: 50%;
@@ -266,26 +370,16 @@ nav ul li a {
 .buy-section {
     height: 150px;
     color: #ffffff;
-    text-align: center;
-}
-
-.buy-section > * {
-    width: 50%;
-    margin: auto;
-}
-
-.buy-section h2 {
-    padding-top: 0.4em;
-    color: #F0810C;
 }
 
 .buy-section button {
-    margin-top: 1.5em;
+    margin: auto;
     border: 2px solid #ffffff;
     border-radius: 10px;
     padding: 1em;
-    width: 200px;
-    background: inherit;
+    width: 50%;
+    background-color: #3B698D;
+    ;
 }
 
 .buy-section button a {
@@ -367,10 +461,8 @@ nav ul li a {
 
 .car-card,
 .car-profile,
-.car-detail,
-    {
+.car-detail {
     width: 246px;
-
 }
 
 .car-state {
@@ -521,7 +613,8 @@ nav ul li a {
 }
 
 #save-carinfo,
-#submit-dealer {
+#submit-dealer,
+#proposal-container button {
     padding: 0.8em 3em;
     margin: 0.5em;
     color: #ffffff;
@@ -590,28 +683,40 @@ nav ul li a {
 
 #divider {
     width: 90%;
-    height: 10px;
+    height: 2px;
     margin: auto;
     border-radius: 10px;
     background-color: #c4c4c4;
 }
 
-#picdetail-container button {
+#picdetail-container #purchase {
     width: 30%;
     margin: auto;
     padding: 1em;
     border-radius: 10px;
     background-color: #F0810C;
+
+}
+
+#picdetail-container #purchase a {
     color: #ffffff;
 }
 
+#picdetail-container #report {
+    width: 30%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: black;
+    border-color: #3B698D;
+}
+
 #picdetail-container ul {
-    width: 70%;
+    width: 50%;
     margin: auto;
     padding: 0.5em;
 }
-
-
 
 #single-pic {
     width: 500px;
@@ -736,6 +841,117 @@ nav ul li a {
 
 #dealerform h2 {
     margin: 0.2em;
+}
+
+/* purchase order */
+#bank-option,
+#cash-option {
+    display: flex;
+    border: 1px solid #c4c4c4;
+    margin: 0.5em;
+    padding: 0.8em;
+    min-height: 100px;
+}
+
+#payoption {
+    margin: 0.6em;
+    padding: 0.7em;
+    background-color: #3B698D;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.cash-text {
+    width: 60%;
+    margin: auto;
+}
+
+.cash-button {
+    width: 30%;
+    margin: auto;
+}
+
+.cash-button button {
+    padding: 0.5em;
+    border: 1px solid #3B698D;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #3B698D;
+}
+
+.cash-button button:hover {
+    background: #3B698D;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#payment-section {
+    width: 100%;
+    display: flex;
+    border-bottom: 10px solid #3B698D;
+}
+
+#payment-section #leftside,
+#payment-section #rightside {
+    width: 50%;
+    margin: auto;
+}
+
+#car {
+    width: 70%;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#payment-section #rightside {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+/* price proposal */
+
+#proposal-container {
+    min-height: 200px;
+}
+
+#proposal-section {
+    width: 40%;
+    margin: auto;
+}
+
+#proposal-section h3 {
+    margin: 1em;
+}
+
+.offer {
+    margin: 0.5em;
+    padding: 0.3em;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+}
+
+/* purchase history */
+#purchase-history {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 0.5em;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#purchase-text {
+    width: 80%;
+    margin: auto;
+}
+
+#edit-button {
+    width: 20%;
+    margin: auto;
 }
 
 /* media queries to target specific screen resolution */
