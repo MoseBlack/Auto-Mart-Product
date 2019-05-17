@@ -738,8 +738,6 @@ nav ul li a {
     margin: 0.2em;
 }
 
-#submit-dealer {}
-
 /* media queries to target specific screen resolution */
 @media(max-width : 535px) {
     nav ul li a {
