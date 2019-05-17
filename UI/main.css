@@ -264,7 +264,32 @@ nav ul li a {
 }
 
 .buy-section {
-    min-height: 150px
+    height: 150px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.buy-section > * {
+    width: 50%;
+    margin: auto;
+}
+
+.buy-section h2 {
+    padding-top: 0.4em;
+    color: #F0810C;
+}
+
+.buy-section button {
+    margin-top: 1.5em;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 1em;
+    width: 200px;
+    background: inherit;
+}
+
+.buy-section button a {
+    color: #ffffff;
 }
 
 #buy-selector {
@@ -462,7 +487,8 @@ nav ul li a {
     padding: 0.8em;
 }
 
-.car-selectinfo {
+.car-selectinfo,
+.dealer-input {
     width: 200px;
     min-height: 40px;
     margin: 0.5em;
@@ -494,7 +520,8 @@ nav ul li a {
 
 }
 
-#save-carinfo {
+#save-carinfo,
+#submit-dealer {
     padding: 0.8em 3em;
     margin: 0.5em;
     color: #ffffff;
@@ -689,6 +716,29 @@ nav ul li a {
 .call-info > p {
     margin: 0.5em;
 }
+
+#dealer-section {
+    display: flex;
+    width: 100%;
+}
+
+#dealer-section #leftside {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#dealer-section #rightside {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#dealerform h2 {
+    margin: 0.2em;
+}
+
+#submit-dealer {}
 
 /* media queries to target specific screen resolution */
 @media(max-width : 535px) {
