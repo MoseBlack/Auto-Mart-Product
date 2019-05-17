@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./UI/main.css">
+    <link rel="stylesheet" href="./main.css">
     <title>Auto Mart</title>
 </head>
 
@@ -22,13 +22,117 @@
             </nav>
         </div>
     </header>
-    <section>
-        <div class="welcome-section">
-            <h1>AutoMart The leading Car Trading Company in Africa</h1>
-            <button id="shop-button">Shop a Car</button>
-            <button id="sell-button">Sell a Car</button>
+    <section id="main-cardetail">
+        <img src="./images/mercedes.jpg" alt="" id="single-pic">
+        <div>
+            <ul id="multipic-container">
+                <li><img src="./images/mercedes.jpg" alt=""></li>
+                <li><img src="./images/mercedes.jpg" alt=""></li>
+                <li><img src="./images/mercedes.jpg" alt=""></li>
+            </ul>
+        </div>
+        <hr id="divider">
+        <div id="picdetail-container">
+            <ul>
+                <li>2018 Dodge Charger</li>
+                <li>LT 53020 miles</li>
+                <li>$20000</li>
+            </ul> <button>Purchase</button>
         </div>
     </section>
-</body>
 
-</html>
+    <section id="more-section">
+        <div class="additional-container">
+            <h2>Additional <span>Features</span></h2>
+            <ul>
+                <li>
+                    <label for=""><input type="checkbox" checked class="box-color"> ABS Brakes</label>
+                    <label for=""><input type="checkbox" checked class="box-color"> Tined Glass</label>
+                </li>
+                <li>
+                    <label for=""><input type="checkbox" checked class="box-color"> Parking sensor</label>
+                    <label for=""><input type="checkbox" checked class="box-color"> Electirc windows</label>
+                </li>
+                <li>
+                    <label for=""><input type="checkbox" checked class="box-color"> Steering wheels control</label>
+                    <label for=""><input type="checkbox" checked class="box-color"> Designed spoiler</label>
+                </li>
+                <li>
+                    <label for=""><input type="checkbox" checked class="box-color"> Electric mirrors</label>
+                    <label for=""><input type="checkbox" checked class="box-color"> Xenon</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="more-description">
+            <h2>More <span>Description</span></h2>
+            <p>Looking for a luxury car without the luxury price? You've found the right car. This car is in great condition! This 2018 Dodge has just under 71K gentle miles. I am the second owner, and have the maintenance logs from the previous owner. This car has been constantly serviced at Dodge dealerships and is up to date on scheduled maintenance.</p>
+        </div>
+
+        <div class="contact-infocontainer">
+            <div class="call-info">
+                <img src="./images/call.png" alt="">
+                <p>0789256100</p>
+            </div>
+            <div class="call-info">
+                <img src="./images/email.png" alt="">
+                <p>test@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="similar-section">
+        <div id="similar-cars">
+            <h2>Similar Cars</h2>
+            <ul>
+                <li class="similar-card">
+                    <div class="similar-profile">
+                        <a href="cardetail.html"><img src="./images/mercedes.jpg" class="similar-picture"></a>
+                        <h5 class="similar-state">AVAILABLE</h5>
+                    </div>
+                    <div class="similar-detail">
+                        <p class="similar-title similar-price">2015 Dodge Charger</p>
+                        <p class="similar-title similar-miles">LT 53019 miles</p>
+                        <p class="similar-title similar-price">$20000</p>
+                    </div>
+                </li>
+
+                <li class="similar-card">
+                    <div class="similar-profile">
+                        <a href="cardetail.html"><img src="./images/mercedes.jpg" class="similar-picture"></a>
+                        <h5 class="similar-state">AVAILABLE</h5>
+                    </div>
+                    <div class="similar-detail">
+                        <p class="similar-title similar-price">2015 Dodge Charger</p>
+                        <p class="similar-title similar-miles">LT 53019 miles</p>
+                        <p class="similar-title similar-price">$20000</p>
+                    </div>
+                </li>
+
+                <li class="similar-card">
+                    <div class="similar-profile">
+                        <a href="cardetail.html"><img src="./images/mercedes.jpg" class="similar-picture"></a>
+                        <h5 class="similar-state">AVAILABLE</h5>
+                    </div>
+                    <div class="similar-detail">
+                        <p class="similar-title similar-price">2015 Dodge Charger</p>
+                        <p class="similar-title similar-miles">LT 53019 miles</p>
+                        <p class="similar-title similar-price">$20000</p>
+                    </div>
+                </li>
+
+                <li class="similar-card">
+                    <div class="similar-profile">
+                        <a href="cardetail.html"><img src="./images/mercedes.jpg" class="similar-picture"></a>
+                        <h5 class="similar-state">AVAILABLE</h5>
+                    </div>
+                    <div class="similar-detail">
+                        <p class="similar-title similar-price">2015 Dodge Charger</p>
+                        <p class="similar-title similar-miles">LT 53019 miles</p>
+                        <p class="similar-title similar-price">$20000</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body></html>

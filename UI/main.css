@@ -327,6 +327,7 @@ nav ul li a {
 }
 
 /* car card */
+
 .right-sidemenu {
     width: 70%;
     margin: auto;
@@ -554,7 +555,140 @@ nav ul li a {
     color: #3498DB;
 }
 
+/*car details*/
+#picdetail-container {
+    display: flex;
+    padding: 1em;
+}
 
+#divider {
+    width: 90%;
+    height: 10px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #c4c4c4;
+}
+
+#picdetail-container button {
+    width: 30%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #F0810C;
+    color: #ffffff;
+}
+
+#picdetail-container ul {
+    width: 70%;
+    margin: auto;
+    padding: 0.5em;
+}
+
+
+
+#single-pic {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+#multipic-container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+#multipic-container li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+#multipic-container li {
+    margin: 0.5em;
+}
+
+/* similar ads */
+#similar-section {
+    margin: 2em;
+}
+
+.similar-card {
+    width: 20%;
+    margin: 1em auto;
+    min-height: 220px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.similar-profile {
+    position: relative;
+}
+
+.similar-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 15px;
+    padding: 0.2em;
+    background-color: yellow;
+}
+
+#similar-cars {
+    text-align: center;
+}
+
+#similar-cars ul {
+    display: flex;
+}
+
+.similar-picture {
+    width: 100%;
+}
+
+/* more section */
+
+#more-section {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+#more-section > * {
+    width: 30%;
+    margin: auto;
+}
+
+#more-section h2 {
+    margin-bottom: 0.3em;
+}
+
+#more-section h2 span {
+    color: #F0810C;
+}
+
+.additional-container ul {}
+
+.contact-infocontainer {
+    text-align: center;
+}
+
+.call-info img {
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+    padding: 0.2em;
+}
+
+.call-info {
+    display: flex;
+    margin: 0.5em;
+}
+
+.call-info > p {
+    margin: 0.5em;
+}
 
 /* media queries to target specific screen resolution */
 @media(max-width : 535px) {
