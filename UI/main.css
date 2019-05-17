@@ -88,8 +88,19 @@ nav ul li a {
 #shop-button:hover,
 #sell-button:hover {
     background-color: #ffffff;
-    color: #F0810C;
+
     cursor: pointer;
+}
+
+#shop-button a,
+#sell-button a {
+    color: #ffffff;
+    padding: 0.2em;
+}
+
+#shop-button a:hover,
+#sell-button a:hover {
+    color: #F0810C;
 }
 
 #sell-button {
@@ -137,6 +148,7 @@ nav ul li a {
 
 .finder-title {
     margin: 0.3em;
+    color: #ffffff;
 }
 
 #main-box {
@@ -167,8 +179,6 @@ nav ul li a {
 #search-icon,
 #resellers,
 #main-icon {
-    border-radius: 50%;
-    border: 2px solid #c4c4c4;
     width: 30px;
     height: 30px;
 }
@@ -188,14 +198,15 @@ nav ul li a {
 
 #footer-container {
     display: flex;
-    width: 80%;
+    width: 90%;
     color: #ffffff;
     margin: auto;
     text-align: center;
 }
 
 #footer-container > * {
-    margin: 1em;
+    width: 20%;
+    margin: auto;
 }
 
 #footer-container ul > * {
@@ -204,6 +215,7 @@ nav ul li a {
 
 footer {
     background-color: #041022;
+    overflow: auto;
 }
 
 .footer-title {
@@ -368,18 +380,23 @@ footer {
 }
 
 .buy-section {
-    height: 150px;
+    height: 100px;
     color: #ffffff;
+    text-align: center;
 }
 
 .buy-section button {
-    margin: auto;
+    width: 200px;
     border: 2px solid #ffffff;
     border-radius: 10px;
+    margin: 2em;
     padding: 1em;
-    width: 50%;
     background-color: #3B698D;
-    ;
+}
+
+#business {
+    text-align: center;
+    margin: 0.5em;
 }
 
 .buy-section button a {
@@ -549,6 +566,7 @@ footer {
 /* sell tips section */
 #sell-precautions {
     text-align: center;
+    margin: 2em;
 }
 
 #sell-precautions ul li {
@@ -694,8 +712,7 @@ footer {
     margin: auto;
     padding: 1em;
     border-radius: 10px;
-    background-color: #F0810C;
-
+    background-color: #3B698D;
 }
 
 #picdetail-container #purchase a {
@@ -713,9 +730,13 @@ footer {
 }
 
 #picdetail-container ul {
-    width: 50%;
+    width: 30%;
     margin: auto;
     padding: 0.5em;
+}
+
+#picdetail-container ul li {
+    text-align: center;
 }
 
 #single-pic {
@@ -800,8 +821,6 @@ footer {
 #more-section h2 span {
     color: #F0810C;
 }
-
-.additional-container ul {}
 
 .contact-infocontainer .callinfo {
     text-align: center;
