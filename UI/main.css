@@ -1600,15 +1600,23 @@ footer {
     }
 
     #finder > * {
-        height: 200px;
+        height: 210px;
     }
 
     #main-box {
-        height: 180px;
+        height: 190px;
     }
 
     #quick-form {
         margin: 1em;
+    }
+
+    #quick-section {
+        min-height: 850px
+    }
+
+    #quick-section #right-side {
+        margin-top: 3em;
     }
 
     .car-card {
