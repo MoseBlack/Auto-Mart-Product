@@ -20,10 +20,10 @@ Auto Mart is an online marketplace for automobiles of diverse makes, model or bo
 
 ## Optional Features
 
-● User can reset password.
-● User can view all cars of a specific body type.
-● User can add multiple pictures to a posted ad.
-● User can flag/report a posted AD as fraudulent.
-● User can view all unsold cars of a specific make (manufacturer).
-● User can view all used unsold cars.
-● User can view all new unsold cars.
+ User can reset password.
+ User can view all cars of a specific body type.
+ User can add multiple pictures to a posted ad.
+ User can flag/report a posted AD as fraudulent.
+ User can view all unsold cars of a specific make (manufacturer).
+ User can view all used unsold cars.
+ User can view all new unsold cars.
