@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* header styles*/
@@ -32,6 +33,20 @@ header {
 nav {
     float: right;
     margin: 1.5em;
+}
+
+#ham-icon,
+#close-icon,
+.dot-icon {
+    display: none;
+}
+
+#ham-icon {
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    display: none;
 }
 
 nav ul {
@@ -146,8 +161,13 @@ nav ul li a {
     padding: 0.5em;
 }
 
-.finder-title {
+.finder-title,
+.search-title {
     margin: 0.3em;
+    text-align: center;
+}
+
+.search-title {
     color: #ffffff;
 }
 
@@ -213,6 +233,7 @@ nav ul li a {
     margin: 0.4em;
 }
 
+
 footer {
     background-color: #041022;
     overflow: auto;
@@ -222,6 +243,8 @@ footer {
     color: #c4c4c4;
     font-weight: bold;
 }
+
+
 
 /* sign up form styles */
 .form-container {
@@ -396,7 +419,7 @@ footer {
 
 #business {
     text-align: center;
-    margin: 0.5em;
+    margin: 1em;
 }
 
 .buy-section button a {
@@ -439,6 +462,14 @@ footer {
     margin: 0.8em;
     color: #fff;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.side-icon {
+    margin: 0.5em 3em;
+}
+
+#close-icon {
+    display: none;
 }
 
 #left-sidemenu {
@@ -662,8 +693,8 @@ footer {
 }
 
 #update-carcontainer img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     margin-right: 0.4em;
 }
 
@@ -673,7 +704,7 @@ footer {
     border-radius: 5px;
     width: 90%;
     margin: auto;
-    min-height: 100px;
+    height: 100px;
     margin-top: 0.5em;
 }
 
@@ -771,7 +802,7 @@ footer {
 .similar-card {
     width: 20%;
     margin: 1em auto;
-    min-height: 220px;
+    min-height: 200px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
 }
@@ -973,10 +1004,694 @@ footer {
     margin: auto;
 }
 
-/* media queries to target specific screen resolution */
-@media(max-width : 535px) {
-    nav ul li a {
-        margin: 0 0.6em;
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    width: 150px;
+    right: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media only screen and (min-width : 1440px) {
+    .header-container h2 {
+        font-size: 2em;
     }
+
+    nav ul {
+        font-size: 1.6em;
+    }
+
+    header {
+        min-height: 5em;
+    }
+
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+
+    #shop-button,
+    #sell-button {
+        padding: 1.5em 4em;
+        margin-top: 19em;
+    }
+
+    #shop-button a,
+    #sell-button a {
+        font-size: 1.5em;
+    }
+
+    #quick-section #left-side {
+        width: 70%;
+    }
+
+    #finder {
+        width: 50%
+    }
+
+    #quick-section #left-side ul {
+        font-size: 1.2em;
+    }
+
+    #quick-form {
+        margin: 1.5em;
+        font-size: 1.2em;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    #footer-container {
+        height: 100%;
+        font-size: 1.2em;
+        display: flex;
+    }
+
+    #footer-container ul > * {
+        margin: 0.8em;
+    }
+
+    .car-card,
+    .car-profile {
+        width: 300px;
+    }
+
+    #business {
+        font-size: 1.5em;
+    }
+
+    .buy-section button a {
+        font-size: 1.2em;
+    }
+
+    .car-picture {
+        width: 99%;
+    }
+
+    .feature-label,
+    .more-description p,
+    .call-info p {
+        font-size: 1.5em;
+    }
+
+    .call-info img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        padding: 1.5em;
+        font-size: 1em;
+    }
+
+    #single-pic {
+        width: 600px;
+        height: 400px;
+    }
+
+    #multipic-container {
+        width: 50%;
+    }
+
+    #multipic-container li img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #picdetail-container ul {
+        font-size: 1.3em;
+    }
+
+    #similar-cars {
+        font-size: 1.3em;
+    }
+
+    #payment-section {
+        font-size: 1.4em;
+    }
+
+    #main-proposal {
+        font-size: 1.4em;
+    }
+
+    #proposal-container button {
+        font-size: 0.7em;
+    }
+
+    #proposal-section {
+        margin-bottom: 1em;
+    }
+
+    #network h2 {
+        font-size: 1.8em;
+    }
+
+    #dealerform form {
+        font-size: 1.2em;
+    }
+
+    #submit-dealer {
+        font-size: 1em;
+    }
+
+    #sell-selectorcontainer,
+    #sell-precautions {
+        font-size: 1.4em;
+    }
+
+    #postform,
+    #updateform {
+        font-size: 1.3em;
+    }
+
+    .car-updateinfo {
+        height: 150px;
+    }
+
+    #update-carcontainer img {
+        width: 200px;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width : 1025px) {
+    .car-profile {
+        width: 230px;
+    }
+
+    .car-picture {
+        width: 99%;
+    }
+
+}
+
+@media only screen and (max-width : 958px) {
+    #finder {
+        width: 80%;
+    }
+
+    #network img {
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width : 823px) {
+
+    #main-box {
+        width: 60%;
+    }
+
+    .similar-card {
+        min-height: 160px;
+    }
+
+    #network img {
+        width: 400px;
+    }
+
+    .car-updateinfo {
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
+
+    .car-updateinfo ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    #update-carcontainer img {
+        width: 100%;
+        height: 150px;
+    }
+
+    #multi-pic li img {
+        width: 45px;
+        height: 45px;
+    }
+
+}
+
+@media only screen and (max-width : 769px) {
+    .hide-card {
+        display: none;
+    }
+
+    .similar-card {
+        width: 23%;
+    }
+
+    /*
+    #footer-container {
+        display: flex;
+    }
+*/
+
+}
+
+@media only screen and (max-width : 734px) {
+    #finder {
+        width: 100%;
+    }
+
+    #buy-selector {
+        font-size: 0.65em;
+    }
+
+    .selector-item {
+        text-align: left;
+    }
+
+    /*
+    .footer-container {
+        display: flex;
+    }
+*/
+
+}
+
+@media only screen and (max-width : 700px) {
+    #quick-section {
+        display: block;
+    }
+
+    #finder > * {
+        margin: 0.4em;
+        height: 170px;
+    }
+
+    #main-box {
+        width: 90%;
+    }
+
+    #quick-section #right-side {
+        width: 80%;
+    }
+
+    #shop-button {
+        margin-top: 16em;
+    }
+
+
+    #side-menu {
+        display: block;
+    }
+
+    #left-sidemenu {
+        display: none;
+    }
+
+
+    #ham-icon,
+    .hamburger-icon {
+        display: inline;
+    }
+
+    #more-section {
+        display: block;
+    }
+
+    #more-section > * {
+        width: 90%;
+        margin: 1em;
+    }
+
+    #network img {
+        width: 300px;
+    }
+
+    /*
+    #footer-container {
+        display: flex;
+    }
+*/
+
+}
+
+
+@media only screen and (max-width : 580px) {
+
+    .nav-item {
+        display: none;
+    }
+
+    .right-sidemenu {
+        width: 100%;
+    }
+
+    .right-sidemenu ul {
+        display: block;
+    }
+
+
+    #side-menu {
+        display: block;
+    }
+
+    #left-sidemenu {
+        display: none;
+    }
+
+
+    #ham-icon,
+    .hamburger-icon {
+        display: inline;
+    }
+
+
+    .car-card {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 140px
+    }
+
+    .car-profile {
+        width: 40%;
+    }
+
+    .car-detail {
+        text-align: center;
+        margin: 1.5em;
+    }
+
+    .dot-icon {
+        display: inline;
+    }
+
+    #single-pic {
+        width: 450px
+    }
+
+    #multipic-container {
+        width: 80%;
+    }
+
+    #picdetail-container ul {
+        width: 60%;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 20%;
+    }
+
+    #similar-cars ul {
+        display: block;
+    }
+
+    .similar-card {
+        width: 60%;
+    }
+
+    #network img {
+        width: 280px;
+    }
+
+    #update-carcontainer img {
+        height: 100px;
+    }
+
+    .car-updateinfo {
+        height: 250px;
+    }
+
+}
+
+@media(max-width : 426px) {
+    #shop-button {
+        margin-top: 15em;
+    }
+
+    #quick-section #left-side {
+        width: 100%;
+    }
+
+    .car-profile {
+        width: 70%;
+    }
+
+    #buy-selector {
+        font-size: 0.56em;
+    }
+
+    #single-pic {
+        width: 400px;
+        height: 250px;
+        margin: 0.8em;
+    }
+
+    #proposal-container button {
+        padding: 0.6em;
+    }
+
+    #payoption h3 {
+        text-align: center;
+    }
+
+    #car {
+        width: 90%;
+    }
+
+    #proposal-section {
+        width: 70%;
+    }
+
+    #network img {
+        width: 240px;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.2em;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 376px) {
+    #single-pic {
+        width: 350px;
+        height: 200px;
+    }
+
+    #multipic-container {
+        width: 92%;
+    }
+
+    #picdetail-container {
+        display: block;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 100%;
+    }
+
+    #proposal-section {
+        width: 70%;
+    }
+
+    #network img {
+        width: 210px;
+        margin-top: 0.8em;
+    }
+
+    #dealer-section {
+        display: block;
+    }
+
+    #dealer-section #leftside,
+    #dealer-section #rightside {
+        width: 100%;
+    }
+
+    #network img {
+        width: 100%;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.1em;
+    }
+
+    #postupdate {
+        display: block;
+    }
+
+    #postform {
+        width: 90%;
+    }
+
+
+    .car-selectinfo {
+        width: 100%;
+    }
+
+    #updateform {
+        width: 90%;
+        margin: auto;
+    }
+
+    #update-carcontainer img {
+        height: 200px;
+    }
+
+    .car-updateinfo {
+        height: 350px;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 321px) {
+    #finder > * {
+        height: 200px;
+    }
+
+    #main-box {
+        height: 180px;
+    }
+
+    #quick-form {
+        margin: 1em;
+    }
+
+    .car-card {
+        height: 120px;
+        width: 98%;
+    }
+
+    .selector-item {
+        width: 19%;
+    }
+
+    .car-detail {
+        margin: 1em;
+    }
+
+    #single-pic {
+        width: 300px;
+        margin: 0.5em;
+        height: 200px
+    }
+
+    #multipic-container {
+        width: 90%;
+    }
+
+    #multipic-container li {
+        margin: 0.5em;
+    }
+
+    #multipic-container li img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #picdetail-container {
+        display: block;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 100%;
+    }
+
+    #payment-section {
+        display: block;
+    }
+
+    #payment-section #leftside,
+    #payment-section #rightside {
+        width: 100%;
+    }
+
+    #payment-section #rightside {
+        margin: 0.2em;
+    }
+
+    #proposal-section {
+        width: 80%;
+    }
+
+    #dealer-section {
+        display: block;
+    }
+
+    #dealer-section #leftside,
+    #dealer-section #rightside {
+        width: 100%;
+    }
+
+    #network img {
+        width: 100%;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.1em;
+    }
+
+    #sell-selectorcontainer,
+    #sell-precautions {
+        font-size: 0.8em;
+    }
+
+    .car-updateinfo {
+        height: 300px;
+    }
+
+    #update-carcontainer img {
+        height: 150px;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+
 
 }
