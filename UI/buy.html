@@ -17,8 +17,16 @@
                     <li class="nav-item"><a href="buy.html" id="active-link">Buy</a></li>
                     <li class="nav-item"><a href="sell.html">Sell</a></li>
                     <li class="nav-item"><a href="about.html">About</a></li>
-                    <li class="nav-item"><a href="./UI/signup.html">Log in</a></li>
-                    <li><img src="./images/user.png" alt="" id="user-pro"></li>
+                    <li class="nav-item"><img src="./images/user.png" alt="" id="user-pro"></li>
+                    <li class="dot-icon dropdown">
+                        <img src="./images/dotts.png" alt="">
+                        <div class="dropdown-content">
+                            <a href="#">Buy</a>
+                            <a href="#">Sell</a>
+                            <a href="#">About</a>
+                            <a href="#">Log out</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -38,14 +46,18 @@
             </ul>
         </div>
         <div>
-            <button id="create-ad">CREATE NEW AD</button>
+            <button id="create-ad">CREATE NEW AD</button><br>
+            <div class="hamburger-icon side-icon">
+                <img src="./images/hamburger.png" alt="" id="ham-icon">
+                <a href="#"><img src="./images/close.png" alt="" id="close-icon"></a>
+            </div>
         </div>
     </section>
     <section>
         <aside id="side-menu">
             <div id="left-sidemenu">
                 <ul>
-                    <li class="side-item">MAKE MODEL<img src="./images/arrow.png" alt="" class="arrow-item"></li>
+                    <li class="side-item">MAKE&amp;MODEL<img src="./images/arrow.png" alt="" class="arrow-item"></li>
                     <li class=" side-item">BODY TYPE<img src="./images/arrow.png" alt="" class="arrow-item"></li>
                     <li class="side-item">YEAR<img src="./images/arrow.png" alt="" class="arrow-item"></li>
                     <li class="side-item">PRICE<img src="./images/arrow.png" alt="" class="arrow-item"></li>
@@ -77,7 +89,7 @@
                             <p class="car-title car-price">$20000</p>
                         </div>
                     </li>
-                    <li class="car-card">
+                    <li class="car-card hide-card">
                         <div class="car-profile">
                             <a href="cardetail.html"><img src="./images/mercedes.jpg" class="car-picture"></a>
                             <h5 class="car-state">SOLD</h5>
@@ -113,7 +125,7 @@
                             <p class="car-title car-price">$20000</p>
                         </div>
                     </li>
-                    <li class="car-card">
+                    <li class="car-card hide-card">
                         <div class="car-profile">
                             <a href="cardetail.html"><img src="./images/mercedes.jpg" class="car-picture"></a>
                             <h5 class="car-state">AVAILABLE</h5>
@@ -149,7 +161,7 @@
                             <p class="car-title car-price">$20000</p>
                         </div>
                     </li>
-                    <li class="car-card">
+                    <li class="car-card hide-card">
                         <div class="car-profile">
                             <a href="cardetail.html"><img src="./images/mercedes.jpg" class="car-picture"></a>
                             <h5 class="car-state">SOLD</h5>
@@ -167,36 +179,45 @@
 
     <footer>
         <div id="footer-container">
-            <ul>
-                <li class="footer-title">Auto Mart</li>
-                <li>&#169; 2019 All Rights Reserved</li>
-                <li>
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </li>
-            </ul>
-            <ul>
-                <li class="footer-title">Auto Mart</li>
-                <li>Buy</li>
-                <li>Sell</li>
-            </ul>
-            <ul>
-                <li class="footer-title">About</li>
-                <li>About us</li>
-            </ul>
-            <ul>
-                <li class="footer-title">Contact</li>
-                <li>Contact us</li>
-                <li>0789562312</li>
-            </ul>
-            <ul>
-                <li class="footer-title">Comapny</li>
-                <li>Terms of use</li>
-                <li>Privacy policy</li>
-            </ul>
+            <div class="footer-group">
+                <h4 class="footer-title">AutoMart</h4>
+                <ul class="hide-footer">
+                    <li>&#169; 2019 All Rights Reserved</li>
+                    <li>
+                        <img src="./UI/images/facebook.png" alt="">
+                        <img src="./UI/images/instagram.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">AutoMart</h4>
+                <ul class="hide-footer">
+                    <li>Buy</li>
+                    <li>Sell</li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">About</h4>
+                <ul class="hide-footer">
+                    <li>About us</li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="hide-footer">
+                    <li>Contact us</li>
+                    <li>0789562312</li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">Company</h4>
+                <ul class="hide-footer">
+                    <li>Terms of use</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </div>
+
         </div>
     </footer>
-</body>
-
-</html>
+    <script src="./buy.js"></script>
+</body></html>

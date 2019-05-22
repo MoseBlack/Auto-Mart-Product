@@ -21,6 +21,7 @@ const loginLink = document.querySelector('#login-link');
 const aboutLink = document.querySelector('#about-link');
 const activeLink = document.querySelector('#active-link');
 const sellLink = document.querySelector('#sell-link');
+const lastCard = document.querySelectorAll('.hide-card');
 emailInput.setAttribute('autofocus', 'true');
 signUpLink.addEventListener('click', function (e) {
     e.preventDefault();
@@ -100,15 +101,13 @@ signupButton.addEventListener('click', function (e) {
     if (emailInput.value.length == 0 || passwordInput.value.length == 0 || confirmInput.value == 0) {
         emptyField();
         return;
-    }
-     else if (passwordInput.value.length < 8 ) {
+    } else if (passwordInput.value.length < 8) {
         signTitle.textContent = 'Password too short';
         signTitle.style.color = '#e74c3c';
         setTimeout(function () {
             window.location.reload();
         }, 2000);
-    }
-    else if (passwordInput.value.indexOf(' ') !== -1 ) {
+    } else if (passwordInput.value.indexOf(' ') !== -1) {
         signTitle.textContent = 'Spaces are not allowed';
         signTitle.style.color = '#e74c3c';
         setTimeout(function () {
