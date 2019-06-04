@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Auto Mart</title>
 </head>
 
@@ -17,14 +17,14 @@
                     <li class="nav-item"><a href="buy.html" id="active-link">Buy</a></li>
                     <li class="nav-item"><a href="sell.html">Sell</a></li>
                     <li class="nav-item"><a href="about.html">About</a></li>
-                    <li class="nav-item"><img src="./images/user.png" alt="" id="user-pro"></li>
+                    <li class="nav-item"><img src="../images/user.png" alt="" id="user-pro"></li>
                     <li class="dot-icon dropdown">
-                        <img src="./images/dotts.png" alt="">
+                        <img src="../images/dotts.png" alt="">
                         <div class="dropdown-content">
-                            <a href="#">Buy</a>
-                            <a href="#">Sell</a>
-                            <a href="#">About</a>
-                            <a href="#">Log out</a>
+                            <a href="buy.html">Buy</a>
+                            <a href="sell.html">Sell</a>
+                            <a href="about.html">About</a>
+                            <a href="signup.html">Log in</a>
                         </div>
                     </li>
                 </ul>
@@ -58,7 +58,7 @@
         <aside id="rightside">
             <div id="car">
                 <div class="similar-profile">
-                    <a href="cardetail.html"><img src="./images/mercedes.jpg" class="similar-picture"></a>
+                    <a href="cardetail.html"><img src="../images/mercedes.jpg" class="similar-picture"></a>
                     <h5 class="similar-state">AVAILABLE</h5>
                 </div>
                 <div class="similar-detail">
@@ -90,7 +90,7 @@
                 <p>$20000</p>
             </div>
             <div id="edit-button">
-                <a href=""><img src="./images/edit.png" alt=""></a>
+                <a href=""><img src="../images/edit.png" alt=""></a>
                 <p>Edit price</p>
             </div>
         </div>
@@ -102,7 +102,7 @@
                 <p>$20000</p>
             </div>
             <div id="edit-button">
-                <a href=""><img src="./images/edit.png" alt=""></a>
+                <a href=""><img src="../images/edit.png" alt=""></a>
                 <p>Edit price</p>
             </div>
         </div>
@@ -114,7 +114,7 @@
                 <p>$20000</p>
             </div>
             <div id="edit-button">
-                <a href=""><img src="./images/edit.png" alt=""></a>
+                <a href=""><img src="../images/edit.png" alt=""></a>
                 <p>Edit price</p>
             </div>
         </div>
@@ -127,22 +127,22 @@
                 <ul class="hide-footer">
                     <li>&#169; 2019 All Rights Reserved</li>
                     <li>
-                        <img src="./UI/images/facebook.png" alt="">
-                        <img src="./UI/images/instagram.png" alt="">
+                        <img src="../images/facebook.png" alt="">
+                        <img src="../images/instagram.png" alt="">
                     </li>
                 </ul>
             </div>
             <div class="footer-group">
                 <h4 class="footer-title">AutoMart</h4>
                 <ul class="hide-footer">
-                    <li>Buy</li>
-                    <li>Sell</li>
+                    <li><a href="buy.html" class="buy-footer">Buy</a></li>
+                    <li><a href="sell.html" class="sell-footer">Sell</a></li>
                 </ul>
             </div>
             <div class="footer-group">
                 <h4 class="footer-title">About</h4>
                 <ul class="hide-footer">
-                    <li>About us</li>
+                    <li><a href="about.html" class="about-footer">About us</a></li>
                 </ul>
             </div>
             <div class="footer-group">
@@ -156,11 +156,12 @@
                 <h4 class="footer-title">Company</h4>
                 <ul class="hide-footer">
                     <li>Terms of use</li>
-                    <li>Privacy policy</li>
                 </ul>
             </div>
 
         </div>
     </footer>
-    <script src="./index.js"></script>
-</body></html>
+    <script src="../js_doc/collapsible.js"></script>
+</body>
+
+</html>
