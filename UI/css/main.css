@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* header styles*/
 .header-container {
     width: 80%;
@@ -81,18 +82,35 @@ nav ul li a {
     color: #ffffff;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
-    background-image: url('./images/mercedes.jpg');
+    background-image: url('../images/mercedes.jpg');
+    background-position: center;
+    /*
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+*/
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
     min-height: 400px;
+    animation: animatedBackground 8s linear infinite;
 }
 
 .welcome-section h1 {
     padding: 0.5em;
-    font-weight: 800;
-    font-style: oblique
+    font-family: courier;
+    font-weight: 600;
 }
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
 
 #shop-button {
     margin-top: 20em;
@@ -237,11 +255,20 @@ nav ul li a {
 footer {
     background-color: #041022;
     overflow: auto;
+    width: 100%;
+
 }
 
 .footer-title {
     color: #c4c4c4;
     font-weight: bold;
+}
+
+.buy-footer,
+.sell-footer,
+.about-footer {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
@@ -284,6 +311,9 @@ footer {
 
 #email-input,
 #password-input,
+#fname-input,
+#lname-input,
+#contact-input,
 #new-password {
     padding: 0.6em;
     border: none;
@@ -309,8 +339,8 @@ footer {
 
 #signup-button,
 #signin-link,
-#confirm-password,
-#new-password,
+.hidden-label,
+.hidden-input,
 #user-profile {
     display: none;
 }
@@ -344,7 +374,8 @@ footer {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-content,
+.report-content {
     background-color: #fefefe;
     margin: 1em auto;
     padding: 2em;
@@ -353,30 +384,43 @@ footer {
     width: 60%;
 }
 
-#modal-text {
+#modal-text,
+.report-text {
     float: left;
 }
 
 /* modal close Button */
-.close {
+#close,
+#close {
     color: #aaa;
     float: right;
     font-size: 1em;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-#send-resetform {
+#send-resetform,
+#send-reportform {
     margin-top: 0.5em;
 }
 
-#send-resetbutton {
+#send-reportform > * {
+    margin: 0.2em;
+}
+
+#send-reportform textarea {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#send-resetbutton,
+#send-reportbutton {
     border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 0.5em;
@@ -384,7 +428,12 @@ footer {
     cursor: pointer;
 }
 
-#send-resetinput {
+#send-reportinput {
+    border: none;
+}
+
+#send-resetinput,
+#send-reportinput {
     border-radius: 5px;
     padding: 0.5em;
 }
@@ -397,6 +446,7 @@ footer {
 /* buy section main menu */
 .buy-section,
 #send-resetbutton,
+#send-reportbutton,
 #signup-button,
 #signin-button {
     background-color: #3B698D;
@@ -461,6 +511,7 @@ footer {
     border-radius: 20px;
     margin: 0.8em;
     color: #fff;
+    cursor: pointer;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
@@ -488,10 +539,21 @@ footer {
     float: right;
 }
 
+.hide-category,
+.hidden-answer {
+    display: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    color: gray;
+    border-radius: 5px;
+    background-color: #F0F0F0
+}
+
 #side-menu {
     padding: 0.2em;
     display: flex;
 }
+
 
 /* car card */
 
@@ -723,6 +785,113 @@ footer {
     padding: 0.5em;
     color: #3498DB;
 }
+
+/* about page styles */
+#frequent-section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#frequent-asked {
+    margin: 0.5em;
+}
+
+.question {
+    cursor: pointer;
+    text-align: left;
+    margin: 1em;
+}
+
+.answer-item {
+    border: 2px solid #f4f4f4;
+    padding: 0.2em;
+}
+
+#contacts-item {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#contacts-item > * {
+    width: 30%;
+    margin: auto;
+}
+
+#contacts-item > li > div {
+    display: flex;
+    align-items: center;
+}
+
+#contacts-item > li > div > h5 {
+    margin-left: 0.5em;
+}
+
+#contacts-section {
+    margin: 1em;
+    padding: 1.5em;
+    border-top: 5px solid #c4c4c4;
+    border-bottom: 5px solid #c4c4c4;
+    border-radius: 20px;
+}
+
+#contacts-section h2 {
+    text-align: center;
+    margin: 1.5em;
+}
+
+#message-section {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    padding: 0.5em;
+}
+
+#message-section ul > * {
+    margin: 0.5em;
+}
+
+#message-section h2 {
+    margin-bottom: 0.5em;
+}
+
+.item-size {
+    width: 80%;
+    padding: 0.5em;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#submit-message {
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #ffffff;
+    background-color: #3498DB;
+    border: none;
+    border-radius: 5px;
+}
+
+#map-section img {
+    width: 100%;
+}
+
+.border-item {
+    border-right: 1px solid #c4c4c4;
+}
+
+/*
+.message-item > * {
+    width: 90%;
+    margin: auto;
+}
+
+#select-item {
+    width: 100%;
+    margin: auto;
+}
+*/
 
 /*car details*/
 #picdetail-container {
@@ -1257,6 +1426,20 @@ footer {
         height: 45px;
     }
 
+    #contacts-item {
+        display: block;
+    }
+
+    #contacts-item > * {
+        width: 100%;
+        margin: auto;
+        border: none;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
 }
 
 @media only screen and (max-width : 769px) {
@@ -1268,11 +1451,6 @@ footer {
         width: 23%;
     }
 
-    /*
-    #footer-container {
-        display: flex;
-    }
-*/
 
 }
 
@@ -1289,11 +1467,6 @@ footer {
         text-align: left;
     }
 
-    /*
-    .footer-container {
-        display: flex;
-    }
-*/
 
 }
 
@@ -1347,11 +1520,10 @@ footer {
         width: 300px;
     }
 
-    /*
-    #footer-container {
-        display: flex;
+    #message-section {
+        width: 90%;
     }
-*/
+
 
 }
 
@@ -1502,8 +1674,29 @@ footer {
         display: block;
     }
 
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
     .hide-footer {
         display: none;
+    }
+
+    .modal-content,
+    .report-content {
+        width: 80%;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+    .item-size {
+        width: 100%;
     }
 }
 
@@ -1608,8 +1801,29 @@ footer {
         display: block;
     }
 
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
     .hide-footer {
         display: none;
+    }
+
+    .modal-content,
+    .report-content {
+        width: 90%;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+    .item-size {
+        width: 90%;
     }
 }
 
@@ -1732,9 +1946,31 @@ footer {
         display: block;
     }
 
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
     .hide-footer {
         display: none;
     }
+
+    .modal-content,
+    .report-content {
+        width: 100%;
+    }
+
+    #message-section {
+        width: 100%;
+    }
+
+    .item-size {
+        width: 90%;
+    }
+
 
 
 }

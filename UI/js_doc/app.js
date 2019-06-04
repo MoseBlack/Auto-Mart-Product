@@ -12,7 +12,7 @@ const resetPassword = document.querySelector('#reset-password');
 const signinLink = document.querySelector('#signin-link');
 const inputsArray = document.querySelectorAll('.form-container form > input');
 const resetPasswordModal = document.querySelector('.modal');
-const modalCloseButton = document.querySelector('.close');
+const modalCloseButton = document.querySelector('#close');
 const sendResetButton = document.querySelector('#send-resetbutton');
 const modalText = document.querySelector('#modal-text');
 const sendResetInput = document.querySelector('#send-resetinput');
@@ -22,11 +22,17 @@ const aboutLink = document.querySelector('#about-link');
 const activeLink = document.querySelector('#active-link');
 const sellLink = document.querySelector('#sell-link');
 const lastCard = document.querySelectorAll('.hide-card');
-emailInput.setAttribute('autofocus', 'true');
+const hiddenLabels = document.querySelectorAll('.hidden-label');
+const hiddenInputs = document.querySelectorAll('.hidden-input');
+// emailInput.setAttribute('autofocus', 'true');
 signUpLink.addEventListener('click', function (e) {
     e.preventDefault();
-    confirmLabel.style.display = 'inline';
-    confirmInput.style.display = 'inline';
+    hiddenLabels.forEach((label) => {
+        label.style.display = 'inline';
+    })
+    hiddenInputs.forEach((input) => {
+        input.style.display = 'inline';
+    })
     signupButton.style.display = 'inline';
     signinButton.style.display = 'none';
     signinLink.style.display = 'inline';
@@ -37,6 +43,12 @@ signUpLink.addEventListener('click', function (e) {
 })
 signinLink.addEventListener('click', function (e) {
     e.preventDefault();
+    hiddenLabels.forEach((label) => {
+        label.style.display = 'none';
+    })
+    hiddenInputs.forEach((input) => {
+        input.style.display = 'none';
+    })
     notAMemberText.style.display = 'inline';
     signUpLink.style.display = 'inline';
     signinLink.style.display = 'none';
@@ -48,7 +60,7 @@ signinLink.addEventListener('click', function (e) {
 // function to display error message for empty field(s)
 function emptyField() {
     inputsArray.forEach(function (input) {
-        if (input.value.length == 0) {
+        if (input.value.length === 0) {
             input.style.border = '1px solid red';
         }
         signTitle.textContent = 'Please fill in all required fields';
@@ -63,7 +75,7 @@ signinButton.addEventListener('click', function (e) {
     e.preventDefault();
     // "test@gmail.com" && "admin123" are set to be test credentials...
     if ((emailInput.value != "test@gmail.com") || (passwordInput.value != "admin123")) {
-        if (emailInput.value.length == 0 || passwordInput.value.length == 0) {
+        if (emailInput.value.length === 0 || passwordInput.value.length === 0) {
             emptyField();
             return;
         }
@@ -98,7 +110,7 @@ signinButton.addEventListener('click', function (e) {
 })
 signupButton.addEventListener('click', function (e) {
     e.preventDefault();
-    if (emailInput.value.length == 0 || passwordInput.value.length == 0 || confirmInput.value == 0) {
+    if (emailInput.value.length === 0 || passwordInput.value.length === 0 || confirmInput.value === 0) {
         emptyField();
         return;
     } else if (passwordInput.value.length < 8) {
@@ -115,7 +127,7 @@ signupButton.addEventListener('click', function (e) {
         }, 2000);
     }
     // check if passwords match before submitting data.. 
-    else if (passwordInput.value.localeCompare(confirmInput.value) == 0 && passwordInput.value.length > 7) {
+    else if (passwordInput.value.localeCompare(confirmInput.value) === 0 && passwordInput.value.length > 7) {
         signTitle.textContent = `Thanks for signing up`;
         signTitle.style.color = '#2ecc71';
         setTimeout(function () {
@@ -131,7 +143,7 @@ signupButton.addEventListener('click', function (e) {
     }
 
 })
-/* show the madal */
+/* show the modal */
 resetPassword.addEventListener('click', function () {
     resetPasswordModal.style.display = 'block';
 })
@@ -159,7 +171,7 @@ sendResetButton.addEventListener('click', function (e) {
 })
 /*hide or close the modal when clicking outiside the modal content */
 window.addEventListener('click', function (e) {
-    if (e.target == resetPasswordModal) {
+    if (e.target === resetPasswordModal) {
         resetPasswordModal.style.display = 'none';
     }
-})
+});

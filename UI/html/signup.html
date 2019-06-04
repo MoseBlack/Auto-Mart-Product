@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Auto Mart</title>
 </head>
 
@@ -25,13 +25,19 @@
     <div class="form-container">
         <p id="signin-title">Sign in to continue to Auto Mart</p>
         <form>
+            <label for="fname-input" class="signup-label hidden-label">First Name</label><br>
+            <input type="text" placeholder="Enter First Name" id="fname-input" class="hidden-input"><br>
+            <label for="lname-input" class="signup-label hidden-label">Last Name</label><br>
+            <input type="text" placeholder="Enter Last Name" id="lname-input" class="hidden-input"><br>
+            <label for="contact-input" class="signup-label hidden-label">Contact address</label><br>
+            <input type="email" placeholder="Enter Contact" id="contact-input" class="hidden-input"><br>
             <label for="email-input" class="signup-label">Email</label><br>
             <input type="email" placeholder="Enter email" id="email-input"><br>
             <label for="password-input" class="signup-label">Password</label><br>
             <input type="password" placeholder="Enter password" id="password-input"><br>
             <span id="pass-alert">a minimum of eight characters is required</span><br>
-            <label for="new-password" id="confirm-password" class="signup-label">Confirm Password</label><br>
-            <input type="password" placeholder="re-enter password" id="new-password"><br>
+            <label for="new-password" id="confirm-password" class="signup-label hidden-label">Confirm Password</label><br>
+            <input type="password" placeholder="re-enter password" id="new-password" class="hidden-input"><br>
             <button id="signin-button">Sign in</button>
             <button id="signup-button">Sign Up</button><br>
             <span id="reset-password">Forgot password&nbsp;?</span>
@@ -43,7 +49,7 @@
     <div class="modal">
         <div class="modal-content">
             <p id="modal-text">We will send instructions to your email to reset password</p>
-            <span class="close">&times;</span><br>
+            <span id="close">&times;</span><br>
             <form id="send-resetform">
                 <input type="email" id="send-resetinput" placeholder="Email">
                 <button id="send-resetbutton">Send</button>
@@ -57,22 +63,22 @@
                 <ul class="hide-footer">
                     <li>&#169; 2019 All Rights Reserved</li>
                     <li>
-                        <img src="./UI/images/facebook.png" alt="">
-                        <img src="./UI/images/instagram.png" alt="">
+                        <img src="../images/facebook.png" alt="">
+                        <img src="../images/instagram.png" alt="">
                     </li>
                 </ul>
             </div>
             <div class="footer-group">
                 <h4 class="footer-title">AutoMart</h4>
                 <ul class="hide-footer">
-                    <li>Buy</li>
-                    <li>Sell</li>
+                    <li><a href="buy.html" class="buy-footer">Buy</a></li>
+                    <li><a href="sell.html" class="sell-footer">Sell</a></li>
                 </ul>
             </div>
             <div class="footer-group">
                 <h4 class="footer-title">About</h4>
                 <ul class="hide-footer">
-                    <li>About us</li>
+                    <li><a href="about.html" class="about-footer">About us</a></li>
                 </ul>
             </div>
             <div class="footer-group">
@@ -86,14 +92,12 @@
                 <h4 class="footer-title">Company</h4>
                 <ul class="hide-footer">
                     <li>Terms of use</li>
-                    <li>Privacy policy</li>
                 </ul>
             </div>
-
         </div>
     </footer>
-    <script src="./app.js"></script>
-    <script src="./index.js"></script>
+    <script src="../js_doc/app.js"></script>
+    <script src="../js_doc/collapsible.js"></script>
 </body>
 
 </html>
