@@ -266,7 +266,8 @@ footer {
 
 .buy-footer,
 .sell-footer,
-.about-footer {
+.about-footer,
+#create-adv {
     text-decoration: none;
     color: #ffffff;
 }
