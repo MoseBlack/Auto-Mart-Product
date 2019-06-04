@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Auto Mart</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h2><span class="brand">Auto</span>Mart</h2>
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="buy.html" id="active-link">Buy</a></li>
+                    <li class="nav-item"><a href="sell.html">Sell</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <li class="nav-item"><img src="../images/user.png" alt="" id="user-pro"></li>
+                    <li class="dot-icon dropdown">
+                        <img src="../images/dotts.png" alt="">
+                        <div class="dropdown-content">
+                            <a href="buy.html">Buy</a>
+                            <a href="sell.html">Sell</a>
+                            <a href="about.html">About</a>
+                            <a href="signup.html">Log in</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="postupdate">
+        <aside id="postform">
+            <div id="car-registerform">
+                <form action="">
+                    <div id="basic-car">
+                        <h4 class="feature-title">Basic Car Information</h4>
+                        <label for="">Year</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">2019</option>
+                            <option value="2019">2018</option>
+                            <option value="2019">2017</option>
+                            <option value="2019">2016</option>
+                            <option value="2019">2015</option>
+                        </select><br>
+                        <label for="">Make</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">BMW</option>
+                            <option value="2019">Mercedes-Benz</option>
+                            <option value="2019">Toyota</option>
+                            <option value="2019">Volkswagen</option>
+                            <option value="2019">Subaru</option>
+                        </select><br>
+                        <label for="">Model</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">Atlas</option>
+                            <option value="2019">E-Class</option>
+                            <option value="2019">Camry</option>
+                            <option value="2019">Jetta</option>
+                            <option value="2019">Forester</option>
+                        </select><br>
+
+                        <label for="">BODY TYPE</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">SUV</option>
+                            <option value="2019">Sedan</option>
+                            <option value="2019">Truck</option>
+                            <option value="2019">Coupe</option>
+                            <option value="2019">Wagon</option>
+                        </select><br>
+
+                        <label for="">STATE</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">NEW</option>
+                            <option value="2019">USED</option>
+
+                        </select><br>
+
+                        <label for="">DEALER</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">DealerShip A</option>
+                            <option value="2019">Dealership B</option>
+
+                        </select><br>
+
+                        <label for="">STATUS</label><br>
+                        <select name="" class="car-selectinfo select-input" width="20px">
+                            <option value="2019">AVAILABLE</option>
+                            <option value="2019">SOLD</option>
+
+                        </select><br>
+
+                        <h3 class="feature-title">Your car features</h3>
+                        <p>Check any that apply</p>
+
+                        <h4 class="feature-title">Seats</h4>
+                        <label for="" class="car-feature"><input type="checkbox"> Bucket Seat</label><br>
+                        <label for="" class="car-feature"><input type="checkbox"> Memory Seat</label><br>
+                        <label for="" class="car-feature"><input type="checkbox"> Power Seats</label>
+
+                        <h4 class="feature-title">Safety</h4>
+                        <label for=""><input type="checkbox"> Airbag:Driver</label><br>
+                        <label for=""><input type="checkbox"> Airbag:Passenger</label><br>
+                        <label for=""><input type="checkbox"> Airbag:Side</label>
+
+                        <h4 class="feature-title">Windows</h4>
+                        <label for=""><input type="checkbox"> Power Windows</label><br>
+                        <label for=""><input type="checkbox"> Rear Window Wiper</label><br>
+                        <label for=""><input type="checkbox"> Tinted Glass</label>
+
+                        <h4 class="feature-title">Entertainment</h4>
+                        <label for=""><input type="checkbox"> AM/FM Stereo</label><br>
+                        <label for=""><input type="checkbox"> Premium Sound</label><br>
+                        <label for=""><input type="checkbox"> DVD System</label>
+
+                        <h4 class="feature-title">Price</h4>
+                        <label for="">Enter Price</label><br>
+                        <input type="number" placeholder="$" class="car-selectinfo"><br>
+
+                        <label for="">Enter Description</label><br>
+                        <textarea name="" id="" cols="25" rows="3" class="car-selectinfo"></textarea>
+
+                        <p class="instructions">You must add at least one picture that describe your car</p>
+                        <p class="instrunctions">Take pictures from various angles and let the customer enjoys your car comfort</p>
+                        <p class="instrunctions">Here are some important specifications</p>
+                        <ul class="cautions">
+                            Don't:
+                            <li>Use unreal pictures</li>
+                            <li>Use stolen pictures</li>
+                        </ul>
+                        <ul class="cautions">
+                            Do:
+                            <li>Choose a clear background</li>
+                            <li>Highlight special features</li>
+                        </ul>
+                        <ul id="multi-pic">
+                            <li><img src="../images/center-console.png" alt=""></li>
+                            <li><img src="../images/front.png" alt=""></li>
+                            <li><img src="../images/front_right.png" alt=""></li>
+                            <li><img src="../images/rear-right.png" alt=""></li>
+                            <li><img src="../images/rear.png" alt=""></li>
+                            <li><img src="../images/rear.png" alt=""></li>
+                        </ul>
+                        <div id="add-pic">
+                            <p>Click to add max 3 pictures</p>
+                            <a href=""><img src="../images/addpic.png" alt=""></a>
+                        </div>
+                    </div>
+                    <input type="Submit" value="Save" id="save-carinfo">
+                </form>
+            </div>
+        </aside>
+
+        <aside id="updateform">
+            <div id="update-carcontainer">
+                <div class="car-updateinfo">
+                    <img src="../images/mercedes.jpg" alt="">
+                    <ul class="make">
+                        <li>2018 Dodge Charger</li>
+                        <li>LT 53020 miles</li>
+                        <li>$20000</li>
+                    </ul>
+                    <ul class="make-options">
+                        <li id="delete"><a href="">Delete</a></li>
+                        <li id="update"><a href="">Update</a></li>
+                        <li>Status :<span>Available</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-updateinfo">
+                    <img src="../images/mercedes.jpg" alt="">
+                    <ul class="make">
+                        <li>2018 Dodge Charger</li>
+                        <li>LT 53020 miles</li>
+                        <li>$20000</li>
+                    </ul>
+                    <ul class="make-options">
+                        <li id="delete"><a href="">Delete</a></li>
+                        <li id="update"><a href="">Update</a></li>
+                        <li>Status :<span>Sold</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-updateinfo">
+                    <img src="../images/mercedes.jpg" alt="">
+                    <ul class="make">
+                        <li>2018 Dodge Charger</li>
+                        <li>LT 53020 miles</li>
+                        <li>$20000</li>
+                    </ul>
+                    <ul class="make-options">
+                        <li id="delete"><a href="">Delete</a></li>
+                        <li id="update"><a href="">Update</a></li>
+                        <li>Status :<span>Available</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-updateinfo">
+                    <img src="../images/mercedes.jpg" alt="">
+                    <ul class="make">
+                        <li>2018 Dodge Charger</li>
+                        <li>LT 53020 miles</li>
+                        <li>$20000</li>
+                    </ul>
+                    <ul class="make-options">
+                        <li id="delete"><a href="">Delete</a></li>
+                        <li id="update"><a href="">Update</a></li>
+                        <li>Status :<span>Sold</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-updateinfo">
+                    <img src="../images/mercedes.jpg" alt="">
+                    <ul class="make">
+                        <li>2018 Dodge Charger</li>
+                        <li>LT 53020 miles</li>
+                        <li>$20000</li>
+                    </ul>
+                    <ul class="make-options">
+                        <li id="delete"><a href="">Delete</a></li>
+                        <li id="update"><a href="">Update</a></li>
+                        <li>Status :<span>Available</span></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <footer>
+        <div id="footer-container">
+            <div class="footer-group">
+                <h4 class="footer-title">AutoMart</h4>
+                <ul class="hide-footer">
+                    <li>&#169; 2019 All Rights Reserved</li>
+                    <li>
+                        <img src="./UI/images/facebook.png" alt="">
+                        <img src="./UI/images/instagram.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">AutoMart</h4>
+                <ul class="hide-footer">
+                    <li><a href="buy.html" class="buy-footer">Buy</a></li>
+                    <li><a href="sell.html" class="sell-footer">Sell</a></li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">About</h4>
+                <ul class="hide-footer">
+                    <li><a href="about.html" class="about-footer">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="hide-footer">
+                    <li>Contact us</li>
+                    <li>0789562312</li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4 class="footer-title">Company</h4>
+                <ul class="hide-footer">
+                    <li>Terms of use</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <script src="./collapsible.js"></script>
+</body>
+
+</html>

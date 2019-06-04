@@ -1,0 +1,1977 @@
+/* personal preference to use universal selector to take control of margins and paddings*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header styles*/
+.header-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    min-height: 4em;
+    border-bottom: 3px solid #c4c4c4;
+}
+
+.header-container h2 {
+    float: left;
+    margin: 0.8em 0;
+}
+
+.header-container h2 .brand {
+    color: #F0810C;
+}
+
+.header-container h2,
+.header-container h2 .brand {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+nav {
+    float: right;
+    margin: 1.5em;
+}
+
+#ham-icon,
+#close-icon,
+.dot-icon {
+    display: none;
+}
+
+#ham-icon {
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+#active-link {
+    color: #F0810C;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul li a {
+    margin: 0 1em;
+    color: #3B698D;
+}
+
+
+/* welcome section styles*/
+
+.welcome-section {
+    color: #ffffff;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-image: url('../images/mercedes.jpg');
+    background-position: center;
+    /*
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    min-height: 400px;
+    animation: animatedBackground 8s linear infinite;
+}
+
+.welcome-section h1 {
+    padding: 0.5em;
+    font-family: courier;
+    font-weight: 600;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+
+#shop-button {
+    margin-top: 20em;
+    background-color: #F0810C;
+    border: none;
+}
+
+#shop-button:hover,
+#sell-button:hover {
+    background-color: #ffffff;
+
+    cursor: pointer;
+}
+
+#shop-button a,
+#sell-button a {
+    color: #ffffff;
+    padding: 0.2em;
+}
+
+#shop-button a:hover,
+#sell-button a:hover {
+    color: #F0810C;
+}
+
+#sell-button {
+    background-color: rgb(0, 0, 0);
+    /*Fallback color*/
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #F0810C;
+    margin-left: 2.5em;
+}
+
+#shop-button,
+#sell-button {
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#quick-section {
+    display: flex;
+}
+
+#quick-section #left-side {
+    width: 70%;
+    margin: auto;
+    min-height: 400px;
+}
+
+#quick-section #right-side {
+    width: 30%;
+    margin: auto;
+}
+
+#main-box,
+#finder > * {
+    border: 1px solid #c4c4c4;
+    margin: 1em;
+    width: 200px;
+    height: 160px;
+    border-radius: 5px;
+}
+
+.finder-card {
+    padding: 0.5em;
+}
+
+.finder-title,
+.search-title {
+    margin: 0.3em;
+    text-align: center;
+}
+
+.search-title {
+    color: #ffffff;
+}
+
+#main-box {
+    width: 50%;
+    margin: auto;
+}
+
+#quick-section #right-side {}
+
+#quick-section #left-side #finder {
+    display: flex;
+}
+
+#quick-section #left-side ul {
+    text-align: center;
+    height: 370px;
+    padding: 1em;
+}
+
+#quick-form {
+    padding: 1em;
+    background-color: #3B698D;
+    margin: 0.5em;
+    min-height: 370px;
+    border-radius: 5px;
+}
+
+#search-icon,
+#resellers,
+#main-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.quick-select {
+    margin: 1em;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    width: 150px;
+    padding: 0.5em;
+}
+
+#finder {
+    width: 60%;
+    margin: auto;
+}
+
+#footer-container {
+    display: flex;
+    width: 90%;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+}
+
+#footer-container > * {
+    width: 20%;
+    margin: auto;
+}
+
+#footer-container ul > * {
+    margin: 0.4em;
+}
+
+
+footer {
+    background-color: #041022;
+    overflow: auto;
+    width: 100%;
+
+}
+
+.footer-title {
+    color: #c4c4c4;
+    font-weight: bold;
+}
+
+.buy-footer,
+.sell-footer,
+.about-footer,
+#create-adv {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+/* sign up form styles */
+.form-container {
+    width: 50%;
+    margin: 1em auto;
+    padding: 1em;
+    border: 2px solid #3B698D;
+    ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#signin-title {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.form-container form {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+/* apply same font-family to labels */
+.signup-label {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.form-container button,
+#signup-button {
+    padding: 0.5em 2.5em;
+    border-radius: 10px;
+    border: none;
+    margin-top: 0.8em;
+}
+
+#email-input,
+#password-input,
+#fname-input,
+#lname-input,
+#contact-input,
+#new-password {
+    padding: 0.6em;
+    border: none;
+    margin-top: 0.5em
+}
+
+#pass-alert {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #e74c3c;
+}
+
+#signup-link,
+#signin-link {
+    text-decoration: none;
+}
+
+#signin-button,
+#signup-button {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#signup-button,
+#signin-link,
+.hidden-label,
+.hidden-input,
+#user-profile {
+    display: none;
+}
+
+#signup-link,
+#signin-link,
+#reset-password {
+    color: #3B698D;
+}
+
+#reset-password {
+    font-size: 0.8em;
+    font-style: italic;
+    cursor: pointer;
+}
+
+/* reset password modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content,
+.report-content {
+    background-color: #fefefe;
+    margin: 1em auto;
+    padding: 2em;
+    min-height: 100px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+#modal-text,
+.report-text {
+    float: left;
+}
+
+/* modal close Button */
+#close,
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#send-resetform,
+#send-reportform {
+    margin-top: 0.5em;
+}
+
+#send-reportform > * {
+    margin: 0.2em;
+}
+
+#send-reportform textarea {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#send-resetbutton,
+#send-reportbutton {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 0.5em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#send-reportinput {
+    border: none;
+}
+
+#send-resetinput,
+#send-reportinput {
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+/* user profile image appears in signup.html page */
+#user-profile {
+    cursor: pointer;
+}
+
+/* buy section main menu */
+.buy-section,
+#send-resetbutton,
+#send-reportbutton,
+#signup-button,
+#signin-button {
+    background-color: #3B698D;
+}
+
+.buy-section {
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.buy-section button {
+    width: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1em;
+    background-color: #3B698D;
+}
+
+#business {
+    text-align: center;
+    margin: 1em;
+}
+
+.buy-section button a {
+    color: #ffffff;
+}
+
+#buy-selector {
+    display: flex;
+}
+
+#buy-selector li {
+    text-decoration: none;
+}
+
+.selector-item {
+    width: 15%;
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.selector-item:hover {
+    background-color: #F0810C;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.item-border {
+    border-right: 2px solid #3B698D;
+    border-bottom: 2px solid #3B698D;
+}
+
+/* buy side menu*/
+#create-ad {
+    background-color: #F0810C;
+    padding: 0.8em;
+    border: none;
+    border-radius: 20px;
+    margin: 0.8em;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.side-icon {
+    margin: 0.5em 3em;
+}
+
+#close-icon {
+    display: none;
+}
+
+#left-sidemenu {
+    height: 200px;
+    border: 1px solid #c4c4c4;
+    width: 23%;
+    height: 100%;
+}
+
+.side-item {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0.8em 0.8em 0.8em 0.2em;
+}
+
+.arrow-item {
+    float: right;
+}
+
+.hide-category,
+.hidden-answer {
+    display: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    color: gray;
+    border-radius: 5px;
+    background-color: #F0F0F0
+}
+
+#side-menu {
+    padding: 0.2em;
+    display: flex;
+}
+
+
+/* car card */
+
+.right-sidemenu {
+    width: 70%;
+    margin: auto;
+    padding: 0.2em;
+}
+
+.right-sidemenu ul {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.car-card,
+.car-profile,
+.car-detail {
+    width: 246px;
+}
+
+.car-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 15px;
+    padding: 0.2em;
+    background-color: yellow;
+}
+
+.car-picture {
+    width: 100%;
+    height: 100%;
+}
+
+.car-profile {
+    max-height: 164px;
+    position: relative;
+}
+
+.car-title {
+    margin: 0.2em;
+}
+
+.car-detail {
+    max-height: 82px;
+    max-width: 200px;
+}
+
+.car-card {
+    margin: 0.5em;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+}
+
+/* sell page styles */
+#user-pro {
+    margin: 0 0.2em;
+}
+
+#sell-selectorcontainer {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.dealer-selector,
+.private-selector {
+    width: 40%;
+    margin: auto;
+}
+
+.dealer-selector img,
+.private-selector img {
+    border-radius: 50%;
+    border: 2px solid #3B698D;
+}
+
+.dealer-selector img {
+    width: 100px;
+    height: 100px;
+}
+
+.bullet-container {
+    display: flex;
+    width: 20%;
+    margin: auto;
+}
+
+.bullet-container hr {
+    width: 100%;
+    margin: auto;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F0810C;
+}
+
+/* sell tips section */
+#sell-precautions {
+    text-align: center;
+    margin: 2em;
+}
+
+#sell-precautions ul li {
+    display: flex;
+}
+
+.sell-tips {
+    width: 50%;
+    margin: auto;
+}
+
+/* post ad form */
+#postupdate {
+    display: flex;
+    width: 100%;
+}
+
+#postform {
+    width: 60%;
+    margin: 0.2em;
+}
+
+#updateform {
+    width: 40%;
+}
+
+#car-registerform {
+    padding: 0.8em;
+}
+
+.car-selectinfo,
+.dealer-input {
+    width: 200px;
+    min-height: 40px;
+    margin: 0.5em;
+    border-radius: 10px;
+    padding: 0.1em;
+}
+
+.instrunctions,
+.cautions {
+    margin: 0.5em;
+}
+
+#multi-pic {
+    display: flex;
+}
+
+#multi-pic li img {
+    width: 50px;
+    height: 50px;
+}
+
+#add-pic {
+    width: 100%;
+    min-height: 150px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+#save-carinfo,
+#submit-dealer,
+#proposal-container button {
+    padding: 0.8em 3em;
+    margin: 0.5em;
+    color: #ffffff;
+    background: #3498DB;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-pic p,
+#add-pic img {
+    margin-top: 1em;
+}
+
+.feature-title {
+    margin: 0.5em;
+    color: #ffffff;
+    background-color: #3B698D;
+    padding: 0.2em;
+    border-radius: 5px;
+}
+
+#update-carcontainer {
+    width: 100%;
+    margin: auto;
+    padding: 0.2em;
+}
+
+#update-carcontainer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0.4em;
+}
+
+.car-updateinfo {
+    display: flex;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 0.5em;
+}
+
+.car-updateinfo ul {
+    width: 50%;
+    margin: auto;
+}
+
+#delete,
+#update {
+    margin: 0.5em;
+}
+
+#delete a,
+#update a {
+    padding: 0.5em;
+    color: #3498DB;
+}
+
+/* about page styles */
+#frequent-section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#frequent-asked {
+    margin: 0.5em;
+}
+
+.question {
+    cursor: pointer;
+    text-align: left;
+    margin: 1em;
+}
+
+.answer-item {
+    border: 2px solid #f4f4f4;
+    padding: 0.2em;
+}
+
+#contacts-item {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#contacts-item > * {
+    width: 30%;
+    margin: auto;
+}
+
+#contacts-item > li > div {
+    display: flex;
+    align-items: center;
+}
+
+#contacts-item > li > div > h5 {
+    margin-left: 0.5em;
+}
+
+#contacts-section {
+    margin: 1em;
+    padding: 1.5em;
+    border-top: 5px solid #c4c4c4;
+    border-bottom: 5px solid #c4c4c4;
+    border-radius: 20px;
+}
+
+#contacts-section h2 {
+    text-align: center;
+    margin: 1.5em;
+}
+
+#message-section {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    padding: 0.5em;
+}
+
+#message-section ul > * {
+    margin: 0.5em;
+}
+
+#message-section h2 {
+    margin-bottom: 0.5em;
+}
+
+.item-size {
+    width: 80%;
+    padding: 0.5em;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#submit-message {
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #ffffff;
+    background-color: #3498DB;
+    border: none;
+    border-radius: 5px;
+}
+
+#map-section img {
+    width: 100%;
+}
+
+.border-item {
+    border-right: 1px solid #c4c4c4;
+}
+
+/*
+.message-item > * {
+    width: 90%;
+    margin: auto;
+}
+
+#select-item {
+    width: 100%;
+    margin: auto;
+}
+*/
+
+/*car details*/
+#picdetail-container {
+    display: flex;
+    padding: 1em;
+}
+
+#divider {
+    width: 90%;
+    height: 2px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #c4c4c4;
+}
+
+#picdetail-container #purchase {
+    width: 30%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #3B698D;
+}
+
+#picdetail-container #purchase a {
+    color: #ffffff;
+}
+
+#picdetail-container #report {
+    width: 30%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: black;
+    border-color: #3B698D;
+}
+
+#picdetail-container ul {
+    width: 30%;
+    margin: auto;
+    padding: 0.5em;
+}
+
+#picdetail-container ul li {
+    text-align: center;
+}
+
+#single-pic {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+#multipic-container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+#multipic-container li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+#multipic-container li {
+    margin: 0.5em;
+}
+
+/* similar ads */
+#similar-section {
+    margin: 2em;
+}
+
+.similar-card {
+    width: 20%;
+    margin: 1em auto;
+    min-height: 200px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.similar-profile {
+    position: relative;
+}
+
+.similar-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 15px;
+    padding: 0.2em;
+    background-color: yellow;
+}
+
+#similar-cars {
+    text-align: center;
+}
+
+#similar-cars ul {
+    display: flex;
+}
+
+.similar-picture {
+    width: 100%;
+}
+
+/* more section */
+
+#more-section {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+#more-section > * {
+    width: 30%;
+    margin: auto;
+}
+
+#more-section h2 {
+    margin-bottom: 0.3em;
+}
+
+#more-section h2 span {
+    color: #F0810C;
+}
+
+.contact-infocontainer .callinfo {
+    text-align: center;
+}
+
+.call-info img {
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+    padding: 0.2em;
+}
+
+.call-info {
+    display: flex;
+    margin: 0.5em;
+}
+
+.call-info > p {
+    margin: 0.5em;
+}
+
+#dealer-section {
+    display: flex;
+    width: 100%;
+}
+
+#dealer-section #leftside {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#dealer-section #rightside {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#dealerform h2 {
+    margin: 0.2em;
+}
+
+/* purchase order */
+#bank-option,
+#cash-option {
+    display: flex;
+    border: 1px solid #c4c4c4;
+    margin: 0.5em;
+    padding: 0.8em;
+    min-height: 100px;
+}
+
+#payoption {
+    margin: 0.6em;
+    padding: 0.7em;
+    background-color: #3B698D;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.cash-text {
+    width: 60%;
+    margin: auto;
+}
+
+.cash-button {
+    width: 30%;
+    margin: auto;
+}
+
+.cash-button button {
+    padding: 0.5em;
+    border: 1px solid #3B698D;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #3B698D;
+}
+
+.cash-button button:hover {
+    background: #3B698D;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#payment-section {
+    width: 100%;
+    display: flex;
+    border-bottom: 10px solid #3B698D;
+}
+
+#payment-section #leftside,
+#payment-section #rightside {
+    width: 50%;
+    margin: auto;
+}
+
+#car {
+    width: 70%;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#payment-section #rightside {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+/* price proposal */
+
+#proposal-container {
+    min-height: 200px;
+}
+
+#proposal-section {
+    width: 40%;
+    margin: auto;
+}
+
+#proposal-section h3 {
+    margin: 1em;
+}
+
+.offer {
+    margin: 0.5em;
+    padding: 0.3em;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+}
+
+/* purchase history */
+#purchase-history {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 0.5em;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#purchase-text {
+    width: 80%;
+    margin: auto;
+}
+
+#edit-button {
+    width: 20%;
+    margin: auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    width: 150px;
+    right: 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media only screen and (min-width : 1440px) {
+    .header-container h2 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        font-size: 1.6em;
+    }
+
+    header {
+        min-height: 5em;
+    }
+
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+
+    #shop-button,
+    #sell-button {
+        padding: 1.5em 4em;
+        margin-top: 19em;
+    }
+
+    #shop-button a,
+    #sell-button a {
+        font-size: 1.5em;
+    }
+
+    #quick-section #left-side {
+        width: 70%;
+    }
+
+    #finder {
+        width: 50%
+    }
+
+    #quick-section #left-side ul {
+        font-size: 1.2em;
+    }
+
+    #quick-form {
+        margin: 1.5em;
+        font-size: 1.2em;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    #footer-container {
+        height: 100%;
+        font-size: 1.2em;
+        display: flex;
+    }
+
+    #footer-container ul > * {
+        margin: 0.8em;
+    }
+
+    .car-card,
+    .car-profile {
+        width: 300px;
+    }
+
+    #business {
+        font-size: 1.5em;
+    }
+
+    .buy-section button a {
+        font-size: 1.2em;
+    }
+
+    .car-picture {
+        width: 99%;
+    }
+
+    .feature-label,
+    .more-description p,
+    .call-info p {
+        font-size: 1.5em;
+    }
+
+    .call-info img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        padding: 1.5em;
+        font-size: 1em;
+    }
+
+    #single-pic {
+        width: 600px;
+        height: 400px;
+    }
+
+    #multipic-container {
+        width: 50%;
+    }
+
+    #multipic-container li img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #picdetail-container ul {
+        font-size: 1.3em;
+    }
+
+    #similar-cars {
+        font-size: 1.3em;
+    }
+
+    #payment-section {
+        font-size: 1.4em;
+    }
+
+    #main-proposal {
+        font-size: 1.4em;
+    }
+
+    #proposal-container button {
+        font-size: 0.7em;
+    }
+
+    #proposal-section {
+        margin-bottom: 1em;
+    }
+
+    #network h2 {
+        font-size: 1.8em;
+    }
+
+    #dealerform form {
+        font-size: 1.2em;
+    }
+
+    #submit-dealer {
+        font-size: 1em;
+    }
+
+    #sell-selectorcontainer,
+    #sell-precautions {
+        font-size: 1.4em;
+    }
+
+    #postform,
+    #updateform {
+        font-size: 1.3em;
+    }
+
+    .car-updateinfo {
+        height: 150px;
+    }
+
+    #update-carcontainer img {
+        width: 200px;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width : 1025px) {
+    .car-profile {
+        width: 230px;
+    }
+
+    .car-picture {
+        width: 99%;
+    }
+
+}
+
+@media only screen and (max-width : 958px) {
+    #finder {
+        width: 80%;
+    }
+
+    #network img {
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width : 823px) {
+
+    #main-box {
+        width: 60%;
+    }
+
+    .similar-card {
+        min-height: 160px;
+    }
+
+    #network img {
+        width: 400px;
+    }
+
+    .car-updateinfo {
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
+
+    .car-updateinfo ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    #update-carcontainer img {
+        width: 100%;
+        height: 150px;
+    }
+
+    #multi-pic li img {
+        width: 45px;
+        height: 45px;
+    }
+
+    #contacts-item {
+        display: block;
+    }
+
+    #contacts-item > * {
+        width: 100%;
+        margin: auto;
+        border: none;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width : 769px) {
+    .hide-card {
+        display: none;
+    }
+
+    .similar-card {
+        width: 23%;
+    }
+
+
+}
+
+@media only screen and (max-width : 734px) {
+    #finder {
+        width: 100%;
+    }
+
+    #buy-selector {
+        font-size: 0.65em;
+    }
+
+    .selector-item {
+        text-align: left;
+    }
+
+
+}
+
+@media only screen and (max-width : 700px) {
+    #quick-section {
+        display: block;
+    }
+
+    #finder > * {
+        margin: 0.4em;
+        height: 170px;
+    }
+
+    #main-box {
+        width: 90%;
+    }
+
+    #quick-section #right-side {
+        width: 80%;
+    }
+
+    #shop-button {
+        margin-top: 16em;
+    }
+
+
+    #side-menu {
+        display: block;
+    }
+
+    #left-sidemenu {
+        display: none;
+    }
+
+
+    #ham-icon,
+    .hamburger-icon {
+        display: inline;
+    }
+
+    #more-section {
+        display: block;
+    }
+
+    #more-section > * {
+        width: 90%;
+        margin: 1em;
+    }
+
+    #network img {
+        width: 300px;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+
+}
+
+
+@media only screen and (max-width : 580px) {
+
+    .nav-item {
+        display: none;
+    }
+
+    .right-sidemenu {
+        width: 100%;
+    }
+
+    .right-sidemenu ul {
+        display: block;
+    }
+
+
+    #side-menu {
+        display: block;
+    }
+
+    #left-sidemenu {
+        display: none;
+    }
+
+
+    #ham-icon,
+    .hamburger-icon {
+        display: inline;
+    }
+
+
+    .car-card {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 140px
+    }
+
+    .car-profile {
+        width: 40%;
+    }
+
+    .car-detail {
+        text-align: center;
+        margin: 1.5em;
+    }
+
+    .dot-icon {
+        display: inline;
+    }
+
+    #single-pic {
+        width: 450px
+    }
+
+    #multipic-container {
+        width: 80%;
+    }
+
+    #picdetail-container ul {
+        width: 60%;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 20%;
+    }
+
+    #similar-cars ul {
+        display: block;
+    }
+
+    .similar-card {
+        width: 60%;
+    }
+
+    #network img {
+        width: 280px;
+    }
+
+    #update-carcontainer img {
+        height: 100px;
+    }
+
+    .car-updateinfo {
+        height: 250px;
+    }
+
+}
+
+@media(max-width : 426px) {
+
+    .form-container {
+        width: 70%;
+    }
+
+    #shop-button {
+        margin-top: 15em;
+    }
+
+    #quick-section #left-side {
+        width: 100%;
+    }
+
+    .car-profile {
+        width: 70%;
+    }
+
+    #buy-selector {
+        font-size: 0.56em;
+    }
+
+    #single-pic {
+        width: 400px;
+        height: 250px;
+        margin: 0.8em;
+    }
+
+    #proposal-container button {
+        padding: 0.6em;
+    }
+
+    #payoption h3 {
+        text-align: center;
+    }
+
+    #car {
+        width: 90%;
+    }
+
+    #proposal-section {
+        width: 70%;
+    }
+
+    #network img {
+        width: 240px;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.2em;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+
+    .modal-content,
+    .report-content {
+        width: 80%;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+    .item-size {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 376px) {
+
+    .form-container {
+        width: 70%;
+    }
+
+    #finder > * {
+        height: 210px;
+    }
+
+    #main-box {
+        height: 188px;
+    }
+
+    #quick-form {
+        margin: 1em;
+    }
+
+    #quick-section {
+        min-height: 850px
+    }
+
+    #quick-section #right-side {
+        margin-top: 3em;
+    }
+
+    #single-pic {
+        width: 350px;
+        height: 200px;
+    }
+
+    #multipic-container {
+        width: 92%;
+    }
+
+    #picdetail-container {
+        display: block;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 100%;
+    }
+
+    #proposal-section {
+        width: 70%;
+    }
+
+    #network img {
+        width: 210px;
+        margin-top: 0.8em;
+    }
+
+    #dealer-section {
+        display: block;
+    }
+
+    #dealer-section #leftside,
+    #dealer-section #rightside {
+        width: 100%;
+    }
+
+    #network img {
+        width: 100%;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.1em;
+    }
+
+    #postupdate {
+        display: block;
+    }
+
+    #postform {
+        width: 90%;
+    }
+
+
+    .car-selectinfo {
+        width: 100%;
+    }
+
+    #updateform {
+        width: 90%;
+        margin: auto;
+    }
+
+    #update-carcontainer img {
+        height: 200px;
+    }
+
+    .car-updateinfo {
+        height: 350px;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+
+    .modal-content,
+    .report-content {
+        width: 90%;
+    }
+
+    #message-section {
+        width: 90%;
+    }
+
+    .item-size {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width : 321px) {
+
+    .form-container {
+        width: 70%;
+    }
+
+    #finder > * {
+        height: 210px;
+    }
+
+    #main-box {
+        height: 190px;
+    }
+
+    #quick-form {
+        margin: 1em;
+    }
+
+    #quick-section {
+        min-height: 850px
+    }
+
+    #quick-section #right-side {
+        margin-top: 3em;
+    }
+
+    .car-card {
+        height: 120px;
+        width: 98%;
+    }
+
+    .selector-item {
+        width: 19%;
+    }
+
+    .car-detail {
+        margin: 1em;
+    }
+
+    #single-pic {
+        width: 300px;
+        margin: 0.5em;
+        height: 200px
+    }
+
+    #multipic-container {
+        width: 90%;
+    }
+
+    #multipic-container li {
+        margin: 0.5em;
+    }
+
+    #multipic-container li img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #picdetail-container {
+        display: block;
+    }
+
+    #picdetail-container #report,
+    #picdetail-container #purchase {
+        width: 100%;
+    }
+
+    #payment-section {
+        display: block;
+    }
+
+    #payment-section #leftside,
+    #payment-section #rightside {
+        width: 100%;
+    }
+
+    #payment-section #rightside {
+        margin: 0.2em;
+    }
+
+    #proposal-section {
+        width: 80%;
+    }
+
+    #dealer-section {
+        display: block;
+    }
+
+    #dealer-section #leftside,
+    #dealer-section #rightside {
+        width: 100%;
+    }
+
+    #network img {
+        width: 100%;
+        margin-top: 0.8em;
+    }
+
+    #network h2 {
+        font-size: 1.1em;
+    }
+
+    #sell-selectorcontainer,
+    #sell-precautions {
+        font-size: 0.8em;
+    }
+
+    .car-updateinfo {
+        height: 300px;
+    }
+
+    #update-carcontainer img {
+        height: 150px;
+    }
+
+    #footer-container {
+        display: block;
+    }
+
+    #footer-container > * {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ffffff;
+        padding: 0.4em;
+        border-radius: 5px;
+    }
+
+    .hide-footer {
+        display: none;
+    }
+
+    .modal-content,
+    .report-content {
+        width: 100%;
+    }
+
+    #message-section {
+        width: 100%;
+    }
+
+    .item-size {
+        width: 90%;
+    }
+
+
+
+}
