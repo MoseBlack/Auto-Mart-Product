@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha ./server/test/*.js --recursive --exit ",
+    "coverage": "nyc --reporter=lcov --reporter=text --cache npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "nodemon ./server/app.js"
   },
   "repository": {
@@ -37,10 +39,13 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^8.2.6",
+    "coveralls": "^3.0.4",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
-    "nodemon": "^1.19.1"
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "chai": "^4.2.0",
