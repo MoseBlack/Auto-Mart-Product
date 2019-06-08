@@ -1,6 +1,8 @@
 # Auto-Mart-Product
 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.
 
+[![Build Status](https://travis-ci.org/MoseBlack/Auto-Mart-Product.svg?branch=signup-api)](https://travis-ci.org/MoseBlack/Auto-Mart-Product)  [![Coverage Status](https://coveralls.io/repos/github/MoseBlack/Auto-Mart-Product/badge.svg?branch=signup-api)](https://coveralls.io/github/MoseBlack/Auto-Mart-Product?branch=signup-api)
+
 ### [UI TEMPLATE Live Demo](https://moseblack.github.io/Auto-Mart-Product/)
 
 ## Required Features
