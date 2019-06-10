@@ -1,6 +1,6 @@
 let id = 3;
 module.exports = function* createId() {
-  while (true) {
+  while (id) {
     yield id += 1;
   }
 };
