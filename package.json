@@ -7,7 +7,8 @@
     "test": "mocha ./server/test/*.js --recursive --exit ",
     "coverage": "nyc --reporter=lcov --reporter=text --cache npm test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "nodemon ./server/app.js"
+    "dev": "nodemon ./server/app.js",
+    "start": "nodemon ./server/app.js"
   },
   "repository": {
     "type": "git",
@@ -51,7 +52,9 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mocha": "^6.1.4",
+    "moment": "^2.24.0",
     "uuid": "^3.3.2"
   }
 }
