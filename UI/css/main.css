@@ -458,6 +458,10 @@ footer {
     color: #ffffff;
     text-align: center;
 }
+.buy-category {
+    text-decoration: none;
+    color: #000000;
+}
 
 .buy-section button {
     width: 200px;
@@ -1825,6 +1829,9 @@ footer {
 
     .item-size {
         width: 90%;
+    }
+    .buy-category{
+        font-size: 0.9em;
     }
 }
 
