@@ -44,4 +44,19 @@ describe('Car Management', () => {
       });
     done();
   });
+
+  it('should return 200 to get all the cars', (done) => {
+    Chai
+      .request(app)
+      .get('/api/v1/cars')
+      .set({ Authorization: `${userToken}` })
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.status).to.be.a('number');
+        // expect(res.body.data.owner).to.be.equals(payload.email);
+        expect(res.body).to.have.property('data').to.be.an('array');
+        // expect(res.body).to.have.property('message').and.to.be.equals('Car adv created successfully');
+      });
+    done();
+  });
 });
