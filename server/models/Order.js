@@ -14,4 +14,3 @@ const order = (data, id, buyer, created_on, status, price) => {
 module.exports = {
   order_model: order,
 };
-
