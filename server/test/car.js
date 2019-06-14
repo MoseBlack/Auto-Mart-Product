@@ -71,4 +71,73 @@ describe('Car Management', () => {
       });
     done();
   });
+  it('should return 200 if car price updated', (done) => {
+    const payload = {
+      price: 10000,
+    };
+    Chai
+      .request(app)
+      .patch('/api/v1/cars/1/price')
+      .set({ Authorization: `${userToken}` })
+      .send(payload)
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.status).to.be.a('number');
+        // expect(res.body).to.have.property('error').and.to.be.equals('No result yet');
+      });
+    done();
+  });
+
+  it('should return 200 if car status updated', (done) => {
+    const payload = {
+      status: 'sold',
+    };
+    Chai
+      .request(app)
+      .patch('/api/v1/cars/1/status')
+      .set({ Authorization: `${userToken}` })
+      .send(payload)
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.status).to.be.a('number');
+        // expect(res.body).to.have.property('error').and.to.be.equals('No result yet');
+      });
+    done();
+  });
+
+  it('should return 400 if no car found associated with the price', (done) => {
+    const payload = {
+      price: 10000,
+    };
+    Chai
+      .request(app)
+      // eslint-disable-next-line no-template-curly-in-string
+      .patch('/api/v1/cars/`${id}`/price')
+      .set({ Authorization: `${userToken}` })
+      .send(payload)
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('car not found');
+      });
+    done();
+  });
+
+  it('should return 400 if no car found associated with the status', (done) => {
+    const payload = {
+      status: 10000,
+    };
+    Chai
+      .request(app)
+      // eslint-disable-next-line no-template-curly-in-string
+      .patch('/api/v1/cars/`${id}`/status')
+      .set({ Authorization: `${userToken}` })
+      .send(payload)
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('car not found');
+      });
+    done();
+  });
 });
