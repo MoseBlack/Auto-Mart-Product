@@ -1,44 +1,55 @@
-// const uuid = require('uuid/v4');
+/* eslint-disable camelcase */
+const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-// const idGenerator = require('../helpers/create_id');
+const config = require('../helpers/config');
 
-const Signup = (req, res) => {
-  const newUser = {
-    id: req.body.id,
-    token: '45erkjherht45495783',
-    email: req.body.email,
-    first_name: req.body.first_name,
-    last_name: req.body.last_name,
-    password: req.body.password,
-    address: req.body.address,
-    is_admin: req.body.is_admin,
-  };
-  if (!req.body.email || !req.body.first_name || !req.body.last_name || !req.body.password) {
-    return res.status(400).json({ status: '400', error: 'Please fill in all the required fields' });
-  }
-  User.push(newUser);
-  return res.status(201).json({ status: '201', data: User });
-};
 
-const Signin = (req, res) => {
-  let foundUser;
-  const signedUser = {
-    id: req.body.id,
-    token: req.body.token,
-    email: req.body.email,
-    password: req.body.password,
-  };
-  User.forEach((user) => {
-    if (user.id === signedUser.id && user.token === signedUser.token && user.email === signedUser.email && user.password === signedUser.password) {
-      foundUser = user;
+const Users = [
+  {
+    id: 1,
+    firstname: 'Moses',
+    lastname: 'Ngabire',
+    email: 'mosestest@gmail.com',
+    password: 'admin_moses123',
+    is_admin: true,
+  },
+];
+// creating new User
+const createUser = (req, res) => {
+  const id = Users.length + 1;
+  const is_admin = false;
+  let checkUser;
+  Users.forEach((user) => {
+    if (user.email === User.user_model(req.body, id, is_admin).email) {
+      checkUser = user;
     }
   });
-  if (foundUser) {
-    return res.status(200).json({ status: '200', data: foundUser });
+  if (checkUser) {
+    return res.status(409).json({ status: 409, error: 'User already exist' });
   }
-  return res.status(404).json({ status: '404', error: 'user not found' });
+
+  if (req.body.firstname && req.body.lastname && req.body.email && req.body.password) {
+    Users.push(User.user_model(req.body, id));
+    const userEmail = User.user_model(req.body, id);
+    const token = jwt.sign({ email: userEmail }, config.secret, { expiresIn: '1h' });
+
+    return res.status(201).json({
+      status: 201, message: 'User created successfully', data: Users[Users.length - 1], token,
+    });
+  } if (req.body.email === '') {
+    return res.json({ message: 'Email is empty' });
+  } if (req.body.firstname === '') {
+    return res.json({ message: 'First name is empty' });
+  }
+  if (req.body.lastname === '') {
+    return res.json({ message: 'Last Name is empty' });
+  }
+  if (req.body.password === '') {
+    return res.json({ message: 'Password is empty' });
+  }
+  return res.status(400).json({ status: 400, error: 'Bad request. All fields are required' });
 };
 module.exports = {
-  signup_user: Signup,
-  signin_user: Signin,
+  // all_users: Users,
+  new_user: createUser,
 };
