@@ -108,5 +108,5 @@ module.exports = {
   updater: updateCarStatus,
   price_update: updateCarPrice,
   delet: deleteCar,
-  // cars: Cars,
+  cars: Cars,
 };
