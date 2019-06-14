@@ -42,4 +42,54 @@ describe('User Authentification', () => {
         done();
       });
   });
+
+  it('should return status code 400 if no data sent', (done) => {
+    Chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({})
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('Bad request. All fields are required');
+        done();
+      });
+  });
+
+  it('should return status code 200 if a user is logged in', (done) => {
+    const payload = {
+      email: 'mose@gmail.com',
+      password: 'moses123',
+    };
+
+    Chai.request(app)
+      .post('/api/v1/auth/signin')
+      .send(payload)
+      .end((err, res) => {
+        expect(err).to.equal(null);
+        expect(res.statusCode).to.equal(200);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('token');
+        expect(res.body).to.have.property('token').to.be.a('string');
+        expect(res.body).to.have.property('data').and.to.be.equals(payload.email);
+        expect(res.body).to.have.property('message').and.to.be.equals('User logged in successfully');
+        done();
+      });
+  });
+
+  it('should return status code 401 if a user signed in with wrong username and password', (done) => {
+    const payload = {
+      email: '2355',
+      password: '<<ds<s!:/',
+    };
+
+    Chai.request(app)
+      .post('/api/v1/auth/signin')
+      .send(payload)
+      .end((err, res) => {
+        expect(res.statusCode).to.equal(401);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('Incorrect username or password');
+        done();
+      });
+  });
 });

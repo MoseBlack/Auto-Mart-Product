@@ -35,12 +35,25 @@ const getAllCars = (req, res) => {
   }
   return res.status(200).json({ status: 200, data: response });
 };
-
-
+const getCar = (req, res) => {
+  let carfound;
+  Cars.forEach((car) => {
+    if (car.id === parseInt(req.params.id, 10) && req.payload.is_admin) {
+      carfound = car;
+    } else if (!req.payload.is_admin) {
+      // eslint-disable-next-line no-shadow
+      carfound = Cars.find(car => car.id === parseInt(req.params.id, 10) && car.status === 'available');
+    }
+  });
+  if (!carfound) {
+    return res.status(400).json({ status: 400, error: 'car not found' });
+  }
+  return res.status(200).json({ status: 200, data: carfound });
+};
 module.exports = {
   post_new_car: postCar,
   all_cars: getAllCars,
-  // single_car: getCar,
+  single_car: getCar,
   // updater: updateCarStatus,
   // price_update: updateCarPrice,
   // delet: deleteCar,
