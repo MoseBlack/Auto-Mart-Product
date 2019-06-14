@@ -49,7 +49,24 @@ const createUser = (req, res) => {
   }
   return res.status(400).json({ status: 400, error: 'Bad request. All fields are required' });
 };
+
+const loginUser = (req, res) => {
+  let loggedUser;
+  Users.forEach((user) => {
+    if (user.email === req.body.email && user.password === req.body.password) {
+      loggedUser = user;
+    }
+  });
+  if (!loggedUser) {
+    return res.status(401).json({ status: 401, error: 'Incorrect username or password' });
+  }
+  const token = jwt.sign({ email: loggedUser.email, id: loggedUser.id }, config.secret, { expiresIn: '1h' });
+  return res.status(200).json({
+    status: 200, message: 'User logged in successfully', data: loggedUser.email, token,
+  });
+};
 module.exports = {
   // all_users: Users,
   new_user: createUser,
+  logged_user: loginUser,
 };

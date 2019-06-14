@@ -24,4 +24,22 @@ describe('User Authentification', () => {
         done();
       });
   });
+
+  it('should return status code 409 if user already exists', (done) => {
+    const payload = {
+      firstname: 'moses',
+      lastname: 'ngabire',
+      email: 'mose@gmail.com',
+      password: 'moses123',
+    };
+    Chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send(payload)
+      .end((err, res) => {
+        expect(res).to.have.status(409);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('User already exist');
+        done();
+      });
+  });
 });
