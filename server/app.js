@@ -1,13 +1,11 @@
 const express = require('express');
-// const router = require('./routes/User');
+const userRouter = require('./routes/User');
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', (req, res) => {
-  res.json('Good');
-});
-const PORT = process.env.PORT || 8080;
+app.use('/api/v1/auth/', userRouter);
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log('connected');
