@@ -50,12 +50,46 @@ const getCar = (req, res) => {
   }
   return res.status(200).json({ status: 200, data: carfound });
 };
+const updateCarStatus = (req, res) => {
+  let carfound;
+  if (req.payload.is_admin) {
+    res.json({ message: 'Admin is not authorised to update' });
+  }
+  Cars.forEach((car) => {
+    if (car.id === parseInt(req.params.id, 10)) {
+      carfound = car;
+    }
+  });
+  if (!carfound) {
+    return res.status(400).json({ status: 400, error: 'car not found' });
+  }
+  carfound.status = req.body.status ? req.body.status : carfound.status;
+  return res.status(200).json({ status: 200, message: 'car status updated', data: carfound });
+};
+
+const updateCarPrice = (req, res) => {
+  let carfound;
+  if (req.payload.is_admin) {
+    res.json({ message: 'Admin is not authorised to update' });
+  }
+  Cars.forEach((car) => {
+    if (car.id === parseInt(req.params.id, 10)) {
+      carfound = car;
+    }
+  });
+  if (!carfound) {
+    return res.status(400).json({ status: 400, error: 'car not found' });
+  }
+  carfound.price = req.body.price ? req.body.price : carfound.price;
+  return res.status(200).json({ status: 200, message: 'car price updated', data: carfound });
+};
+
 module.exports = {
   post_new_car: postCar,
   all_cars: getAllCars,
   single_car: getCar,
-  // updater: updateCarStatus,
-  // price_update: updateCarPrice,
+  updater: updateCarStatus,
+  price_update: updateCarPrice,
   // delet: deleteCar,
   // cars: Cars,
 };
