@@ -84,12 +84,29 @@ const updateCarPrice = (req, res) => {
   return res.status(200).json({ status: 200, message: 'car price updated', data: carfound });
 };
 
+const deleteCar = (req, res) => {
+  let carfound;
+  if (!req.payload.is_admin) {
+    res.status(403).json({ status: 403, message: 'Not authorized' });
+  }
+  Cars.forEach((car) => {
+    if (car.id === parseInt(req.params.id, 10)) {
+      carfound = car;
+    }
+  });
+  if (!carfound) {
+    return res.status(404).json({ status: 404, error: 'car not found' });
+  }
+  // const newArray = Cars.filter(car => car.id !== parseInt(req.params.id, 10));
+  return res.status(200).json({ status: 200, message: 'car successfully deleted' });
+};
+
 module.exports = {
   post_new_car: postCar,
   all_cars: getAllCars,
   single_car: getCar,
   updater: updateCarStatus,
   price_update: updateCarPrice,
-  // delet: deleteCar,
+  delet: deleteCar,
   // cars: Cars,
 };

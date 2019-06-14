@@ -9,4 +9,5 @@ route.get('/cars', tokenChecker.checkToken, controller.all_cars);
 route.get('/cars/:id', tokenChecker.checkToken, controller.single_car);
 route.patch('/cars/:id/status', tokenChecker.checkToken, controller.updater);
 route.patch('/cars/:id/price', tokenChecker.checkToken, controller.price_update);
+route.delete('/cars/:id', tokenChecker.checkToken, controller.delet);
 module.exports = route;

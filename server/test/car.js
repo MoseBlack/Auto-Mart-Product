@@ -140,4 +140,29 @@ describe('Car Management', () => {
       });
     done();
   });
+  it('should return 404 if no car found to delete', (done) => {
+    Chai
+      .request(app)
+      .delete('/api/v1/cars/1')
+      .set({ Authorization: `${userToken}` })
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('error').and.to.be.equals('car not found');
+      });
+    done();
+  });
+
+  it('should return 404 if no car found to delete', (done) => {
+    Chai
+      .request(app)
+      .delete('/api/v1/cars/1')
+      .set({ Authorization: `${userToken}` })
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.status).to.be.a('number');
+        expect(res.body).to.have.property('message').and.to.be.equals('car successfully deleted');
+      });
+    done();
+  });
 });
